@@ -1,9 +1,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DSGVO snippet for Leaflet Map and its Extensions Github\n"
+"Project-Id-Version: DSGVO snippet for Leaflet Map and its Extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-18 20:20+0000\n"
+"POT-Creation-Date: 2025-02-20 11:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.11; wp-6.6.2\n"
+"X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Domain: dsgvo-leaflet-map"
 
 #. %s are the shortcode
@@ -51,11 +51,7 @@ msgid "days"
 msgstr ""
 
 #. Name of the plugin
-msgid "DSGVO snippet for Leaflet Map and its Extensions Github"
-msgstr ""
-
-#. Description of the plugin
-msgid "DSGVO/GDPR snippet for Leaflet Map and its Extensions"
+msgid "DSGVO snippet for Leaflet Map and its Extensions Github Version"
 msgstr ""
 
 #: admin.php:78
@@ -133,11 +129,17 @@ msgid ""
 "DSGVO snippet for Leaflet Map and its Extensions."
 msgstr ""
 
-#: admin.php:218
+#: admin.php:223
 msgid "Reset"
 msgstr ""
 
-#: dsgvo-leaflet-map.php:45 admin.php:177 admin.php:206
+#. Description of the plugin
+msgid ""
+"Respect the DSGVO / GDPR when you use Leaflet Map and Extensions for Leaflet "
+"Map."
+msgstr ""
+
+#: dsgvo-leaflet-map.php:45 admin.php:177 admin.php:211
 msgid "Settings"
 msgstr ""
 
@@ -157,7 +159,7 @@ msgstr ""
 msgid "Submit Button"
 msgstr ""
 
-#: admin.php:209
+#: admin.php:214
 msgid "Test it in a private browser window."
 msgstr ""
 

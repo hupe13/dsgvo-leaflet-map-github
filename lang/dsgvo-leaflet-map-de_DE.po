@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - DSGVO snippet for Leaflet Map and its Extensions - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-18 20:23+0000\n"
+"PO-Revision-Date: 2025-02-20 11:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,11 +11,7 @@ msgstr ""
 "Language: de_DE\n"
 "Project-Id-Version: Plugins - DSGVO snippet for Leaflet Map and its "
 "Extensions - Stable (latest release)\n"
-"Language-Team: Deutsch\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-24 11:03+0000\n"
-"Last-Translator: \n"
-"X-Loco-Version: 2.6.14; wp-6.7.1"
+"Language-Team: Deutsch"
 
 #. %s are the shortcode
 #: php/shortcode.php:61
@@ -54,12 +50,8 @@ msgid "days"
 msgstr "Tage"
 
 #. Name of the plugin
-msgid "DSGVO snippet for Leaflet Map and its Extensions Github"
-msgstr "DSGVO Snippet für Leaflet Map und seine Erweiterungen Github"
-
-#. Description of the plugin
-msgid "DSGVO/GDPR snippet for Leaflet Map and its Extensions"
-msgstr "DSGVO/GDPR Snippet für Leaflet Map und seine Erweiterungen"
+msgid "DSGVO snippet for Leaflet Map and its Extensions Github Version"
+msgstr "DSGVO Snippet für Leaflet Map und seine Erweiterungen Github Version"
 
 #: admin.php:78
 msgid "each map"
@@ -82,7 +74,6 @@ msgid "GDPR"
 msgstr "DSGVO"
 
 #: admin.php:138
-#| msgid "GDPR (DSGVO) snippet for %s and its Extensions"
 msgid "GDPR (DSGVO) snippet for Leaflet Map and its Extensions"
 msgstr "DSGVO Snippet für Leaflet Map und seine Erweiterungen"
 
@@ -138,14 +129,22 @@ msgid ""
 "Please install and activate %1$sExtensions for Leaflet Map%2$s before using "
 "DSGVO snippet for Leaflet Map and its Extensions."
 msgstr ""
-"Bitte installiere und aktiviere %1$sErweiterungen für Leaflet Map%2$s bevor "
-"du das DSGVO snippet für Leaflet Map und seine Erweiterungen verwendest."
+"Bitte installiere und aktiviere %1$sErweiterungen für Leaflet Map%2$s, bevor "
+"du DSGVO Snippet für Leaflet Map und seine Erweiterungen verwendest."
 
-#: admin.php:218
+#: admin.php:223
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: dsgvo-leaflet-map.php:45 admin.php:177 admin.php:206
+#. Description of the plugin
+msgid ""
+"Respect the DSGVO / GDPR when you use Leaflet Map and Extensions for Leaflet "
+"Map."
+msgstr ""
+"Respektiere die DSGVO, wenn du Leaflet Map und seine Erweiterungen "
+"verwendest."
+
+#: dsgvo-leaflet-map.php:45 admin.php:177 admin.php:211
 msgid "Settings"
 msgstr "Einstellungen"
 
@@ -167,7 +166,7 @@ msgstr ""
 msgid "Submit Button"
 msgstr "Formular absenden"
 
-#: admin.php:209
+#: admin.php:214
 msgid "Test it in a private browser window."
 msgstr "Teste es in einem privaten Browserfenster."
 
@@ -190,7 +189,7 @@ msgid ""
 "agrees, the cookie %2$s is set and %1$s is executed."
 msgstr ""
 "Das Plugin verhindert das Ausführen des Shortcodes %1$s. Erst wenn der "
-"Nutzer zustimmt, wird das Cookie %2$s gesetzt und %1$s wird ausgeführt."
+"Nutzer zustimmt, wird das Cookie %2$s gesetzt und %1$s ausgeführt."
 
 #: php/leaflet-map.php:25
 msgid "URL to background image. Leave it blank for no image."

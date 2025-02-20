@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       DSGVO snippet for Leaflet Map and its Extensions Github
- * Description:       DSGVO/GDPR snippet for Leaflet Map and its Extensions
+ * Plugin Name:       DSGVO snippet for Leaflet Map and its Extensions Github Version
+ * Description:       Respect the DSGVO / GDPR when you use Leaflet Map and Extensions for Leaflet Map.
  * Plugin URI:        https://leafext.de/en/
- * Version:           250218
+ * Version:           250220
  * Requires PHP:      7.4
  * Requires Plugins:  leaflet-map, extensions-leaflet-map
  * Author:            hupe13
@@ -29,13 +29,21 @@ $plugin_data = get_plugin_data( __FILE__, true, false );
 define( 'LEAFEXT_DSGVO_PLUGIN_VERSION', $plugin_data['Version'] );
 
 if ( ! function_exists( 'leafext_plugin_active' ) ) {
-	function leafext_plugin_active( $plugin ) {
-		if ( ! ( strpos( implode( ' ', get_option( 'active_plugins', array() ) ), '/' . $plugin . '.php' ) === false &&
-			strpos( implode( ' ', array_keys( get_site_option( 'active_sitewide_plugins', array() ) ) ), '/' . $plugin . '.php' ) === false ) ) {
-			return true;
-		} else {
-			return false;
+	function leafext_plugin_active( $slug ) {
+		$plugins = glob( WP_PLUGIN_DIR . '/*/' . $slug . '.php' );
+		foreach ( $plugins as $plugin ) {
+			$split = array_map( 'strrev', explode( '/', strrev( $plugin ) ) );
+			if ( is_plugin_active( trailingslashit( $split[1] ) . $split[0] ) ) {
+				if ( $split[1] === 'leafext-update-github' ) {
+					return true;
+				}
+				if ( $split[1] !== $slug ) {
+					return 'github';
+				}
+				return true;
+			}
 		}
+		return false;
 	}
 }
 

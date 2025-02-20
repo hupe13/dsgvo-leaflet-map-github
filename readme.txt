@@ -1,9 +1,9 @@
-=== DSGVO snippet for Leaflet Map and its Extensions Github ===
+=== DSGVO snippet for Leaflet Map and its Extensions Github Version ===
 
 Contributors: hupe13
 Tags: dsgvo, gdpr, leaflet
 Tested up to: 6.7
-Stable tag: 250218
+Stable tag: 250220
 Requires at least: 6.0
 Requires PHP: 7.4
 License: GPLv2 or later
