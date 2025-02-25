@@ -87,8 +87,8 @@ if ( version_compare( $wp_version, '6.5', '<' ) ) {
 }
 
 // Disable activation the other of WP / Github Version
-if ( ! function_exists( 'leafext_disable_github_activation' ) ) {
-	function leafext_disable_github_activation( $actions, $plugin_file ) {
+if ( ! function_exists( 'leafext_disable_dsgvo_activation' ) ) {
+	function leafext_disable_dsgvo_activation( $actions, $plugin_file ) {
 		if ( array_key_exists( 'activate', $actions ) ) {
 			if ( basename( $plugin_file ) === basename( __FILE__ ) ) {
 				$actions['activate'] = wp_strip_all_tags( $actions['activate'] );
@@ -97,7 +97,7 @@ if ( ! function_exists( 'leafext_disable_github_activation' ) ) {
 		return $actions;
 	}
 }
-add_filter( 'plugin_action_links', 'leafext_disable_github_activation', 10, 4 );
+add_filter( 'plugin_action_links', 'leafext_disable_dsgvo_activation', 10, 4 );
 
 // Github
 if ( is_admin() ) {
