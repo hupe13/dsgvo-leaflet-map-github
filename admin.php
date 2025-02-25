@@ -21,7 +21,7 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 			'leafext_dsgvo_do_page'
 		);
 	}
-	add_action( 'admin_menu', 'leafext_dsgvo_add_page', 100 );
+	add_action( 'admin_menu', 'leafext_dsgvo_add_page', 90 );
 
 	function leafext_dsgvo_init() {
 		add_settings_section( 'leafext_dsgvo', '', '', 'leafext_settings_dsgvo' );
@@ -198,14 +198,6 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 	// Draw the menu page itself
 	function leafext_dsgvo_do_page() {
 		leafext_dsgvo_help();
-		// Github only
-		if ( function_exists( 'leafext_goto_main_site' ) ) {
-			leafext_goto_main_site();
-		}
-		if ( function_exists( 'leafext_token_form' ) && is_main_site() && ! leafext_plugin_active( 'leafext-update-github' ) ) {
-			leafext_token_form();
-		}
-		// End Github only
 		leafext_dsgvo_help_what();
 		echo '<h3>';
 		esc_html_e( 'Settings', 'dsgvo-leaflet-map' );

@@ -1,8 +1,8 @@
-###  250215
+###  250215 / WordPress Version 2.1
 
 * aria-label for submit button
 
-###  250124
+###  250124 / WordPress Version 2.0
 
 * interpreting frontend / backend (Elementor)
 * new shortcode leafext-cookie

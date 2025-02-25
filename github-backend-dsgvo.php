@@ -20,11 +20,8 @@ add_action( 'plugins_loaded', 'leafext_dsgvo_textdomain' );
 if ( ! function_exists( 'leafext_get_repos' ) ) {
 	require_once LEAFEXT_DSGVO_PLUGIN_DIR . 'github/github-functions.php';
 }
-if (
-	is_admin() && is_main_site()
-	&& ! leafext_plugin_active( 'leafext-update-github' )
-	&& leafext_plugin_active( 'extensions-leaflet-map' ) !== 'github'
-) {
+
+if ( is_main_site() ) {
 	require_once LEAFEXT_DSGVO_PLUGIN_DIR . 'github/github-settings.php';
 	require_once LEAFEXT_DSGVO_PLUGIN_DIR . 'github/github-check-update.php';
 }
