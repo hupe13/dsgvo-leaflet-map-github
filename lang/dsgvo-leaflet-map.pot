@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DSGVO snippet for Leaflet Map and its Extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-20 11:04+0000\n"
+"POT-Creation-Date: 2025-03-01 20:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -109,6 +109,10 @@ msgstr ""
 msgid "is active."
 msgstr ""
 
+#: dsgvo-leaflet-map.php:76
+msgid "Manage plugins"
+msgstr ""
+
 #: php/leaflet-map.php:21
 msgid "Okay"
 msgstr ""
@@ -122,14 +126,18 @@ msgid "Options GDPR"
 msgstr ""
 
 #. %s is a link.
-#: dsgvo-leaflet-map.php:68
+#: dsgvo-leaflet-map.php:72
 #, php-format
 msgid ""
 "Please install and activate %1$sExtensions for Leaflet Map%2$s before using "
 "DSGVO snippet for Leaflet Map and its Extensions."
 msgstr ""
 
-#: admin.php:223
+#: dsgvo-leaflet-map.php:81
+msgid "Plugin Error"
+msgstr ""
+
+#: admin.php:215
 msgid "Reset"
 msgstr ""
 
@@ -139,7 +147,7 @@ msgid ""
 "Map."
 msgstr ""
 
-#: dsgvo-leaflet-map.php:45 admin.php:177 admin.php:211
+#: dsgvo-leaflet-map.php:53 admin.php:177 admin.php:203
 msgid "Settings"
 msgstr ""
 
@@ -159,7 +167,7 @@ msgstr ""
 msgid "Submit Button"
 msgstr ""
 
-#: admin.php:214
+#: admin.php:206
 msgid "Test it in a private browser window."
 msgstr ""
 
