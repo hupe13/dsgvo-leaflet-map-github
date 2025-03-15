@@ -61,9 +61,9 @@ Maybe you need a Github token.
 
 ## Changelog
 
-###  2.1 / 250215
+###  2.2 / 250315
 
-* aria-label for submit button
+* css corrections
 
 ### Previous
 

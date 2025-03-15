@@ -1,6 +1,6 @@
-###  250215 / 
+###  250315 /  WordPress Version 2.2
 
-* css correction
+* css corrections
 
 ###  250215 / WordPress Version 2.1
 
