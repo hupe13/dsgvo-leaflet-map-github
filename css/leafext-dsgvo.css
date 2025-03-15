@@ -1,7 +1,13 @@
 .leafext-dsgvo {
 	background-position: center;
 	border: gray 2px solid;
-	display:flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.leafext-dsgvo-submit {
+	display: flex;
 	justify-content: center;
 	align-items: center;
 }

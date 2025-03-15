@@ -25,9 +25,9 @@ function leafext_restricted( $atts, $content ) {
 			$options['text'] = wp_kses_post( $options['text'] );
 			$form            = '<form action="" method="post">';
 			$form            = $form . wp_nonce_field( 'leafext_dsgvo', 'leafext_dsgvo_okay' );
-			$form            = $form . '<p style="display:flex; justify-content: center; align-items: center;">' . $options['text'] . '</p>';
+			$form            = $form . '<p class="leafext-dsgvo">' . $options['text'] . '</p>';
 			$form            = $form .
-			'<p class="submit" style="display:flex; justify-content: center; align-items: center;">
+			'<p class="submit leafext-dsgvo-submit">
 			<input type="submit" aria-label="Submit ' . esc_attr( $options['okay'] ) . '" value="' . esc_attr( $options['okay'] ) . '" name="leafext_button" /></p>
 			</form>';
 			return $form;

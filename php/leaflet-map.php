@@ -99,8 +99,8 @@ function leafext_query_cookie( $output, $tag ) {
 		$formbegin_safe = '<form action="" method="post">';
 		$formbegin_safe = $formbegin_safe . wp_nonce_field( 'leafext_dsgvo', 'leafext_dsgvo_okay' );
 		$settings       = leafext_dsgvo_settings();
-		$formtext       = '<p style="display:flex; justify-content: center; align-items: center;">' . $settings['text'] . '</p>';
-		$formend_safe   = '<p class="submit" style="display:flex; justify-content: center; align-items: center;">
+		$formtext       = '<p>' . $settings['text'] . '</p>';
+		$formend_safe   = '<p class="submit leafext-dsgvo-submit">
 		<input type="submit" aria-label="Submit ' . esc_attr( $settings['okay'] ) . '" value="' . esc_attr( $settings['okay'] ) . '" name="leafext_button" /></p>
 		</form>';
 
