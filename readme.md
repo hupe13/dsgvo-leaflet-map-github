@@ -2,7 +2,7 @@
 
 Contributors: hupe13  
 Tags: dsgvo, gdpr, leaflet  
-Tested up to: 6.7  
+Tested up to: 6.8  
 Stable tag: 2.2  
 Requires at least: 6.0  
 Requires PHP: 7.4  
