@@ -61,9 +61,9 @@ Maybe you need a Github token.
 
 ## Changelog
 
-###  2.2 / 250316
+###  2.3 / 2504xx
 
-* css corrections
+* bug with sgpx
 
 ### Previous
 

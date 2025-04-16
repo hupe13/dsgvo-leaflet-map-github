@@ -105,6 +105,8 @@ function leafext_query_cookie( $output, $tag ) {
 		</form>';
 
 		global $leafext_okay;
+		global $leafext_sgpx;
+
 		if ( ! isset( $leafext_okay ) ) {
 			$leafext_okay = true;
 			wp_dequeue_style( 'leaflet_stylesheet' );
@@ -124,6 +126,10 @@ function leafext_query_cookie( $output, $tag ) {
 		$sgpxoptions = leafext_sgpx_settings();
 
 		if ( $tag === 'sgpx' ) {
+			if ( ! isset( $leafext_sgpx ) ) {
+				$leafext_sgpx = true;
+				$form         = true;
+			}
 			if ( leafext_plugin_active( 'wp-gpx-maps' ) && $sgpxoptions['sgpx'] === '0' ) {
 				return $output;
 			}

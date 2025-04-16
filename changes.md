@@ -1,3 +1,7 @@
+###  250316 /  WordPress Version 2.3
+
+* bug with sgpx
+
 ###  250316 /  WordPress Version 2.2
 
 * css corrections
