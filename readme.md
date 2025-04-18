@@ -3,7 +3,7 @@
 Contributors: hupe13  
 Tags: dsgvo, gdpr, leaflet  
 Tested up to: 6.8  
-Stable tag: 2.2  
+Stable tag: 2.3  
 Requires at least: 6.0  
 Requires PHP: 7.4  
 License: GPLv2 or later  
@@ -61,9 +61,9 @@ Maybe you need a Github token.
 
 ## Changelog
 
-###  2.3 / 2504xx
+###  2.3 / 250418
 
-* bug with sgpx
+* The form appears for sgpx also now.
 
 ### Previous
 

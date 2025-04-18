@@ -1,16 +1,16 @@
-###  250316 /  WordPress Version 2.3
+###  250418 /  Plugins WordPress Version 2.3
 
-* bug with sgpx
+* The form appears for sgpx also now.
 
-###  250316 /  WordPress Version 2.2
+###  250316 /  Plugins WordPress Version 2.2
 
 * css corrections
 
-###  250215 / WordPress Version 2.1
+###  250215 / Plugins WordPress Version 2.1
 
 * aria-label for submit button
 
-###  250124 / WordPress Version 2.0
+###  250124 / Plugins WordPress Version 2.0
 
 * interpreting frontend / backend (Elementor)
 * new shortcode leafext-cookie
@@ -19,13 +19,13 @@
 
 * fixed leafext_should_interpret_shortcode is not always defined for Github version
 
-###  241115 / WordPress Version 1.1
+###  241115 / Plugins WordPress Version 1.1
 
 * Plugin Checks
 * textdomains
 * WordPress 6.7
 
-###  240917 / WordPress Version 1.0
+###  240917 / Plugins WordPress Version 1.0
 
 * It is now an official WordPress plugin! https://wordpress.org/plugins/dsgvo-leaflet-map/
 * textdomain changed, please check your TTfP settings for this plugin.
