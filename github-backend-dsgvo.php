@@ -11,7 +11,6 @@ defined( 'ABSPATH' ) || die();
 // for translating a plugin
 function leafext_dsgvo_textdomain() {
 	if ( get_locale() === 'de_DE' ) {
-		load_plugin_textdomain( 'leafext-update-github', false, LEAFEXT_DSGVO_PLUGIN_NAME . '/github/lang/' );
 		load_plugin_textdomain( 'dsgvo-leaflet-map', false, LEAFEXT_DSGVO_PLUGIN_NAME . '/lang/' );
 	}
 }

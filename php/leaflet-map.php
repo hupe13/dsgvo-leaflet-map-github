@@ -78,9 +78,27 @@ function leafext_setcookie() {
 }
 add_action( 'init', 'leafext_setcookie' );
 
+add_filter(
+	'pre_do_shortcode_tag',
+	function ( $output, $shortcode ) {
+		if ( 'leaflet-map' === $shortcode ) {
+			global $leafext_cookie_mapid;
+			if ( ! isset( $leafext_cookie_mapid ) ) {
+				$leafext_cookie_mapid = 1;
+			} else {
+				$leafext_cookie_mapid++;
+			}
+		}
+		return $output;
+	},
+	10,
+	2
+);
+
 function leafext_query_cookie( $output, $tag ) {
 	if ( ( is_singular() || is_archive() || is_home() || is_front_page() ) && ! current_user_can( 'edit_post', get_the_ID() ) ) {
 		global $leafext_cookie;
+		global $leafext_cookie_mapid;
 		if (
 			is_admin()
 			// || is_user_logged_in()
@@ -88,6 +106,9 @@ function leafext_query_cookie( $output, $tag ) {
 			|| isset( $_COOKIE['leafext'] )
 			|| $leafext_cookie
 			) {
+			if ( isset( $_SERVER['REQUEST_METHOD'] ) && sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) === 'POST' ) {
+				$output = str_replace( 'class="leaflet-map', 'id="map_' . $leafext_cookie_mapid . '" class="leaflet-map', $output );
+			}
 			return $output;
 		}
 		wp_enqueue_style(
@@ -96,7 +117,7 @@ function leafext_query_cookie( $output, $tag ) {
 			array(),
 			LEAFEXT_DSGVO_PLUGIN_VERSION
 		);
-		$formbegin_safe = '<form action="" method="post">';
+		$formbegin_safe = '<form action="#map_' . $leafext_cookie_mapid . '" method="post">';
 		$formbegin_safe = $formbegin_safe . wp_nonce_field( 'leafext_dsgvo', 'leafext_dsgvo_okay' );
 		$settings       = leafext_dsgvo_settings();
 		$formtext       = '<p>' . $settings['text'] . '</p>';

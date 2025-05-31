@@ -1,3 +1,7 @@
+###  2506xx /  Plugins WordPress Version 2.4
+
+* If the user agrees, the page is reloaded and (this is new) then jumps to this map.
+
 ###  250418 /  Plugins WordPress Version 2.3
 
 * The form appears for sgpx also now.

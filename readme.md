@@ -3,7 +3,7 @@
 Contributors: hupe13  
 Tags: dsgvo, gdpr, leaflet  
 Tested up to: 6.8  
-Stable tag: 2.3  
+Stable tag: trunk  
 Requires at least: 6.0  
 Requires PHP: 7.4  
 License: GPLv2 or later  
@@ -61,9 +61,9 @@ Maybe you need a Github token.
 
 ## Changelog
 
-###  2.3 / 250418
+###  250531
 
-* The form appears for sgpx also now.
+* If the user agrees, the page is reloaded and (this is new) then jumps to this map.
 
 ### Previous
 
