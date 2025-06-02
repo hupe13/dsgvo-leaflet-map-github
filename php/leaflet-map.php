@@ -107,6 +107,12 @@ function leafext_query_cookie( $output, $tag ) {
 			|| $leafext_cookie
 			) {
 			if ( isset( $_SERVER['REQUEST_METHOD'] ) && sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) === 'POST' ) {
+				wp_enqueue_style(
+					'leafext-dsgvo-css',
+					plugins_url( 'css/leafext-dsgvo.css', LEAFEXT_DSGVO_PLUGIN_FILE ),
+					array(),
+					LEAFEXT_DSGVO_PLUGIN_VERSION
+				);
 				$output = str_replace( 'class="leaflet-map', 'id="map_' . $leafext_cookie_mapid . '" class="leaflet-map', $output );
 			}
 			return $output;
