@@ -3,7 +3,7 @@
 Contributors: hupe13  
 Tags: dsgvo, gdpr, leaflet  
 Tested up to: 6.8  
-Stable tag: trunk  
+Stable tag: 2.3.1  
 Requires at least: 6.0  
 Requires PHP: 7.4  
 License: GPLv2 or later  
@@ -61,7 +61,7 @@ Maybe you need a Github token.
 
 ## Changelog
 
-###  250531
+###  250603
 
 * If the user agrees, the page is reloaded and (this is new) then jumps to this map.
 
