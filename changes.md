@@ -1,3 +1,7 @@
+###  2506xx
+
+* New shortcodes leafext-cookie-time and leafext-delete-cookie
+
 ###  250603 /  Plugins WordPress Version 2.3.1
 
 * If the user agrees, the page is reloaded and (this is new) then jumps to this map.

@@ -72,7 +72,7 @@ function leafext_setcookie() {
 			'httponly' => true,
 			'samesite' => 'Strict', // None || Lax  || Strict
 		);
-		setcookie( 'leafext', 1, $arr_cookie_options );
+		setcookie( 'leafext', time(), $arr_cookie_options );
 		$leafext_cookie = true;
 	}
 }

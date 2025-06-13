@@ -61,9 +61,9 @@ Maybe you need a Github token.
 
 ## Changelog
 
-###  250603
+###  2506xx
 
-* If the user agrees, the page is reloaded and (this is new) then jumps to this map.
+* New shortcodes leafext-cookie-time and leafext-delete-cookie
 
 ### Previous
 

@@ -134,21 +134,21 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 
 	// Erklaerung / Hilfe
 	function leafext_dsgvo_help() {
-		$text = '<h3>' .
+		$text = '<h2>' .
 		__( 'GDPR (DSGVO) snippet for Leaflet Map and its Extensions', 'dsgvo-leaflet-map' )
-		. '</h3>';
+		. '</h2>';
 		echo wp_kses_post( $text );
 	}
 
 	function leafext_dsgvo_help_what() {
-		$text = '<h3>' . __( 'Function of the plugin', 'dsgvo-leaflet-map' ) . '</h3>';
-		$text = $text . '<p>' . sprintf(
+		$text  = '<h3>' . __( 'Function', 'dsgvo-leaflet-map' ) . '</h3>';
+		$text .= '<p>' . sprintf(
 		/* translators: %1$s is leaflet-map, %2$s is the cookie name */
 			__( 'The plugin prevents the shortcode %1$s from being executed. If the user agrees, the cookie %2$s is set and %1$s is executed.', 'dsgvo-leaflet-map' ),
 			'<code>&#091;leaflet-map]</code>',
 			'<code>leafext</code>'
 		) . '</p>';
-		$text = $text . '<p>' .
+		$text .= '<p>' .
 		sprintf(
 			/* translators: %s are hrefs. */
 			__(
@@ -158,7 +158,7 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 			'<a href="https://leafext.de/extra/dsgvo-example/">',
 			'</a>'
 		);
-		$text = $text . '.</p>';
+		$text .= '.</p>';
 		echo wp_kses_post( $text );
 	}
 
@@ -195,9 +195,7 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 		}
 	}
 
-	// Draw the menu page itself
-	function leafext_dsgvo_do_page() {
-		leafext_dsgvo_help();
+	function leafext_dsgvo_main_help() {
 		leafext_dsgvo_help_what();
 		echo '<h3>';
 		esc_html_e( 'Settings', 'dsgvo-leaflet-map' );
@@ -215,7 +213,26 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 			submit_button( __( 'Reset', 'dsgvo-leaflet-map' ), 'delete', 'delete', false );
 		}
 		echo '</form>';
-		leafext_dsgvo_short_code_help();
+	}
+
+	// Draw the menu page itself
+	function leafext_dsgvo_do_page() {
+		//phpcs:ignore WordPress.Security.NonceVerification.Recommended -- no form
+		$get        = map_deep( wp_unslash( $_GET ), 'sanitize_text_field' );
+		$active_tab = isset( $get['tab'] ) ? $get['tab'] : 'help';
+
+		echo '<div style="max-width: 1000px;">';
+
+		leafext_admin_dsgvo_tabs();
+
+		if ( strpos( $active_tab, 'shortcode' ) !== false ) {
+			leafext_dsgvo_short_code_help();
+		} elseif ( strpos( $active_tab, 'time-delete' ) !== false ) {
+			leafext_dsgvo_time_delete_help();
+		} else {
+			leafext_dsgvo_main_help();
+		}
+		echo '</div>';
 	}
 
 	// Suche bestimmten Wert in array im admin interface
@@ -248,5 +265,44 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 
 		echo '<input type="text" class="color-picker" id="leafext_dsgvo_color" name="leafext_dsgvo[color]" data-alpha-enabled="true" data-default-color="'
 		. esc_attr( $defcolor ) . '" value="' . esc_attr( $value ) . '">';
+	}
+
+	function leafext_admin_dsgvo_tabs() {
+		echo '<div class="wrap nothickbox">';
+		leafext_dsgvo_help();
+		echo '</div>' . "\n";
+
+		//phpcs:ignore WordPress.Security.NonceVerification.Recommended -- no form
+		$get        = map_deep( wp_unslash( $_GET ), 'sanitize_text_field' );
+		$active_tab = isset( $get['tab'] ) ? $get['tab'] : 'help';
+
+		echo '<h3 class="nav-tab-wrapper">';
+		echo '<a href="' . esc_url( '?page=' . LEAFEXT_DSGVO_PLUGIN_NAME . '&tab=help' ) . '" class="nav-tab';
+		echo $active_tab === 'help' ? ' nav-tab-active' : '';
+		echo '">' . esc_html__( 'Help', 'dsgvo-leaflet-map' ) . '</a>' . "\n";
+
+		$tabs = array(
+			array(
+				'tab'   => 'shortcode',
+				'title' => 'leafext-cookie',
+			),
+			array(
+				'tab'   => 'time-delete',
+				'title' => __( 'cookie-time & delete-cookie', 'dsgvo-leaflet-map' ),
+			),
+		);
+
+		foreach ( $tabs as $tab ) {
+			echo '<a href="' . esc_url( '?page=' . LEAFEXT_DSGVO_PLUGIN_NAME . '&tab=' . $tab['tab'] ) . '" class="nav-tab';
+			$active = ( $active_tab === $tab['tab'] ) ? ' nav-tab-active' : '';
+			if ( isset( $tab['strpos'] ) ) {
+				if ( strpos( $active_tab, $tab['strpos'] ) !== false ) {
+					$active = ' nav-tab-active';
+				}
+			}
+			echo esc_attr( $active );
+			echo '">' . esc_html( $tab['title'] ) . '</a>' . "\n";
+		}
+		echo '</h3>';
 	}
 }
