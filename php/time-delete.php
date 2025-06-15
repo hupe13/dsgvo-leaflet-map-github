@@ -25,6 +25,14 @@ function leafext_get_cookie_time( $atts, $content ) {
 			} else {
 				$content = wp_date( $format, $cookie_time );
 			}
+
+			$before = isset( $atts['before'] ) ? $atts['before'] : '';
+			$after  = isset( $atts['after'] ) ? $atts['after'] : '';
+
+			$content = $before . $content . $after;
+
+		} else {
+			$content = isset( $atts['noset'] ) ? $atts['noset'] : '';
 		}
 	}
 	return $content;
@@ -102,7 +110,7 @@ function leafext_dsgvo_time_delete_help() {
 	);
 
 	$text .= '<h3>Code</h3>';
-	$text .= '<p><pre' . $codestyle . '><code' . $codestyle . '>&#091;leafext-cookie-time gmt=0/1 format="..."]</code></pre></p>';
+	$text .= '<p><pre' . $codestyle . '><code' . $codestyle . '>&#091;leafext-cookie-time gmt=0/1 before="..." format="..." after="..." noset="..."]</code></pre></p>';
 	$text .= '<p><pre' . $codestyle . '><code' . $codestyle . '>&#091;leafext-delete-cookie delete="..."]</code></pre></p>';
 
 	$text .= '<h3>' . __( 'Options', 'dsgvo-leaflet-map' ) . '</h3>';
@@ -116,7 +124,14 @@ function leafext_dsgvo_time_delete_help() {
 		'<a href="https://wordpress.org/documentation/article/customize-date-and-time-format/">',
 		'</a>'
 	) . '</li>';
-	$text = $text . '<li style="list-style-type:disc;margin-left: 1.5em;"><code>delete</code> - ' . __( 'Text of submit button.', 'dsgvo-leaflet-map' ) . '</li>';
+	$text = $text . '<li style="list-style-type:disc;margin-left: 1.5em;"><code>before</code> - '
+	. __( 'extra text to display before date and time.', 'dsgvo-leaflet-map' ) . '</li>';
+	$text = $text . '<li style="list-style-type:disc;margin-left: 1.5em;"><code>after</code> - '
+	. __( 'extra text to display after date and time.', 'dsgvo-leaflet-map' ) . '</li>';
+	$text = $text . '<li style="list-style-type:disc;margin-left: 1.5em;"><code>noset</code> - '
+	. __( 'text to display if the cookie is not set.', 'dsgvo-leaflet-map' ) . '</li>';
+	$text = $text . '<li style="list-style-type:disc;margin-left: 1.5em;"><code>delete</code> - '
+	. __( 'Text of submit button.', 'dsgvo-leaflet-map' ) . '</li>';
 	$text = $text . '</ul></p>';
 
 	$text = $text . '<h3><a href="https://leafext.de/extra/dsgvo-cookie/">' . __( 'Examples', 'dsgvo-leaflet-map' ) . '</a></h3>';
