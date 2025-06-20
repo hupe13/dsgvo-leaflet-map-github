@@ -64,6 +64,7 @@ Maybe you need a Github token.
 ###  2506xx
 
 * New shortcodes leafext-cookie-time and leafext-delete-cookie
+* Styling (css)
 
 ### Previous
 

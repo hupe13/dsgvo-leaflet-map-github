@@ -1,6 +1,7 @@
 ###  2506xx
 
 * New shortcodes leafext-cookie-time and leafext-delete-cookie
+* Styling (css)
 
 ###  250603 /  Plugins WordPress Version 2.3.1
 

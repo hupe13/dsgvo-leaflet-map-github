@@ -8,10 +8,18 @@
 // Direktzugriff auf diese Datei verhindern.
 defined( 'ABSPATH' ) || die();
 
-// for translating a plugin
+// for translating, geklaut von PUC
 function leafext_dsgvo_textdomain() {
-	if ( get_locale() === 'de_DE' ) {
-		load_plugin_textdomain( 'dsgvo-leaflet-map', false, LEAFEXT_DSGVO_PLUGIN_NAME . '/lang/' );
+	$domain  = 'dsgvo-leaflet-map';
+	$locale  = apply_filters(
+		'plugin_locale',
+		( is_admin() && function_exists( 'get_user_locale' ) ) ? get_user_locale() : get_locale(),
+		$domain
+	);
+	$mo_file = $domain . '-' . $locale . '.mo';
+	$path    = realpath( __DIR__ ) . '/lang/';
+	if ( $path && file_exists( $path ) ) {
+		load_textdomain( $domain, $path . $mo_file );
 	}
 }
 add_action( 'plugins_loaded', 'leafext_dsgvo_textdomain' );

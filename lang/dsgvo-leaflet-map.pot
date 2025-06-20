@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DSGVO snippet for Leaflet Map and its Extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-01 20:35+0000\n"
+"POT-Creation-Date: 2025-06-20 08:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,25 +16,33 @@ msgstr ""
 "X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Domain: dsgvo-leaflet-map"
 
+#. %s are leafext-cookie-time and leafext-delete-cookie
+#: admin/help.php:173
+#, php-format
+msgid ""
+"%1$s shows the time when the cookie was set and %2$s displays a button to "
+"delete the cookie."
+msgstr ""
+
 #. %s are the shortcode
-#: php/shortcode.php:61
+#: admin/help.php:116
 #, php-format
 msgid ""
 "All content between %1$s and %2$s will only be displayed if the user agrees. "
-"The cookie is the same as above %3$s."
+"The cookie is the same %3$s."
 msgstr ""
 
 #. %s are hrefs.
-#: admin.php:154
+#: admin/help.php:49
 #, php-format
 msgid "An example is %1$shere%2$s"
 msgstr ""
 
-#: admin.php:181
+#: admin/help.php:76 admin/help.php:145
 msgid "and"
 msgstr ""
 
-#: php/shortcode.php:70
+#: admin/help.php:126
 msgid "any content, but not a shortcode"
 msgstr ""
 
@@ -42,12 +50,30 @@ msgstr ""
 msgid "Color of the background"
 msgstr ""
 
+#: admin/help.php:267
+msgid "Content of WordPress \"Delete\" button or option"
+msgstr ""
+
 #: php/leaflet-map.php:36
 msgid "Cookie Lifetime"
 msgstr ""
 
+#: admin.php:210
+msgid "cookie-time & delete-cookie"
+msgstr ""
+
+#. %s are leafext-cookie-time and leafext-delete-cookie
+#: admin/help.php:189
+#, php-format
+msgid "Date and time format, see %1$sCustomize date and time format%2$s."
+msgstr ""
+
 #: admin.php:72
 msgid "days"
+msgstr ""
+
+#: php/time-delete.php:48
+msgid "Delete"
 msgstr ""
 
 #. Name of the plugin
@@ -58,28 +84,48 @@ msgstr ""
 msgid "each map"
 msgstr ""
 
-#: admin.php:179
+#: admin/help.php:74
 msgid "enable"
 msgstr ""
 
-#: admin.php:183
+#: admin/help.php:148
+msgid "Example"
+msgstr ""
+
+#: admin/help.php:203
+msgid "Examples"
+msgstr ""
+
+#: admin/help.php:196
+msgid "extra text to display after date and time."
+msgstr ""
+
+#: admin/help.php:194
+msgid "extra text to display before date and time."
+msgstr ""
+
+#: admin/help.php:78
 msgid "fill in your text"
 msgstr ""
 
-#: admin.php:144
-msgid "Function of the plugin"
+#: admin/help.php:39
+msgid "Function"
 msgstr ""
 
 #: admin.php:18
 msgid "GDPR"
 msgstr ""
 
-#: admin.php:138
+#: admin/help.php:33
 msgid "GDPR (DSGVO) snippet for Leaflet Map and its Extensions"
 msgstr ""
 
-#: admin.php:175
+#: admin/help.php:70
 msgid "Go to"
+msgstr ""
+
+#: admin.php:201
+msgid "Help"
 msgstr ""
 
 #. URI of the plugin
@@ -92,24 +138,20 @@ msgid "hupe13"
 msgstr ""
 
 #. %s is a link.
-#: admin.php:189
+#: admin/help.php:84
 #, php-format
 msgid "If you wish to translate these strings in %s use"
 msgstr ""
 
-#. %s is the shortcode
-#: php/shortcode.php:53
-#, php-format
-msgid ""
-"In addition, there is the shortcode %1$s. You can use this shortcode "
-"anywhere in your pages / posts."
-msgstr ""
-
-#: admin.php:173
+#: admin/help.php:68
 msgid "is active."
 msgstr ""
 
-#: dsgvo-leaflet-map.php:76
+#: admin/help.php:185
+msgid "local time of the web server (default) or GMT time"
+msgstr ""
+
+#: dsgvo-leaflet-map.php:71
 msgid "Manage plugins"
 msgstr ""
 
@@ -121,23 +163,31 @@ msgstr ""
 msgid "only first"
 msgstr ""
 
+#: admin/help.php:135 admin/help.php:182
+msgid "Options"
+msgstr ""
+
 #: admin.php:17
 msgid "Options GDPR"
 msgstr ""
 
+#: admin/help.php:254 admin/help.php:257
+msgid "or option"
+msgstr ""
+
 #. %s is a link.
-#: dsgvo-leaflet-map.php:72
+#: dsgvo-leaflet-map.php:67
 #, php-format
 msgid ""
 "Please install and activate %1$sExtensions for Leaflet Map%2$s before using "
 "DSGVO snippet for Leaflet Map and its Extensions."
 msgstr ""
 
-#: dsgvo-leaflet-map.php:81
+#: dsgvo-leaflet-map.php:76
 msgid "Plugin Error"
 msgstr ""
 
-#: admin.php:215
+#: admin/help.php:26
 msgid "Reset"
 msgstr ""
 
@@ -147,14 +197,28 @@ msgid ""
 "Map."
 msgstr ""
 
-#: dsgvo-leaflet-map.php:53 admin.php:177 admin.php:203
+#: admin/help.php:232
+msgid "See also the content of"
+msgstr ""
+
+#: admin/help.php:240 admin/help.php:241 admin/help.php:254 admin/help.php:257
+msgid "Setting of"
+msgstr ""
+
+#: dsgvo-leaflet-map.php:46 admin/help.php:14 admin/help.php:72
 msgid "Settings"
 msgstr ""
 
 #. %s is leafext_cookie
-#: php/shortcode.php:42
+#: admin/help.php:96
 #, php-format
 msgid "Shortcode %s"
+msgstr ""
+
+#. %s is leafext_cookie
+#: admin/help.php:160
+#, php-format
+msgid "Shortcodes %1$s and %2$s"
 msgstr ""
 
 #: php/leaflet-map.php:41
@@ -163,26 +227,41 @@ msgid ""
 "map?"
 msgstr ""
 
-#: php/leaflet-map.php:20
+#: admin.php:214 admin/help.php:220
+msgid "Styling"
+msgstr ""
+
+#: php/leaflet-map.php:20 admin/help.php:145 admin/help.php:241
+#: admin/help.php:257
 msgid "Submit Button"
 msgstr ""
 
-#: admin.php:206
+#: admin/help.php:17
 msgid "Test it in a private browser window."
 msgstr ""
 
-#: php/leaflet-map.php:15
+#: php/leaflet-map.php:15 admin/help.php:145 admin/help.php:240
+#: admin/help.php:254
 msgid "Text"
 msgstr ""
 
+#: admin/help.php:200
+msgid "Text of submit button. Default: Content of WordPress \"Delete\" button."
+msgstr ""
+
+#: admin/help.php:198
+msgid "text to display if the cookie is not set."
+msgstr ""
+
 #. %s are options
-#: php/shortcode.php:74
+#: admin/help.php:139
 #, php-format
-msgid "The options %1$s and %2$s are optional. Default is the setting."
+msgid ""
+"The options %1$s and %2$s are optional. Defaults are the %3$ssettings%4$s of"
 msgstr ""
 
 #. %1$s is leaflet-map, %2$s is the cookie name
-#: admin.php:147
+#: admin/help.php:42
 #, php-format
 msgid ""
 "The plugin prevents the shortcode %1$s from being executed. If the user "
@@ -200,8 +279,19 @@ msgid ""
 "no maps will be displayed."
 msgstr ""
 
+#: admin/help.php:223
+msgid ""
+"You can use following classes to style the the text area and the buttons:"
+msgstr ""
+
+#. %s is the shortcode
+#: admin/help.php:108
+#, php-format
+msgid "You can use the shortcode %1$s anywhere in your pages / posts."
+msgstr ""
+
 #. %s are options
-#: php/shortcode.php:80
+#: admin/help.php:131
 #, php-format
 msgid ""
 "You can’t write another shortcode in %s shortcode, because WordPress doesn’t "

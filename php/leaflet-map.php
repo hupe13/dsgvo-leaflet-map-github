@@ -55,9 +55,6 @@ function leafext_dsgvo_settings() {
 }
 
 function leafext_setcookie() {
-	global $leafext_cookie;
-	$leafext_cookie = false;
-
 	if ( isset( $_SERVER['REQUEST_METHOD'] ) && sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) === 'POST' && ! empty( $_POST['leafext_button'] ) ) {
 		if ( isset( $_REQUEST['leafext_dsgvo_okay'] ) && ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_REQUEST['leafext_dsgvo_okay'] ) ), 'leafext_dsgvo' ) ) {
 			wp_die( 'invalid', 404 );
@@ -73,7 +70,7 @@ function leafext_setcookie() {
 			'samesite' => 'Strict', // None || Lax  || Strict
 		);
 		setcookie( 'leafext', time(), $arr_cookie_options );
-		$leafext_cookie = true;
+		$_COOKIE['leafext'] = time();
 	}
 }
 add_action( 'init', 'leafext_setcookie' );
@@ -97,14 +94,12 @@ add_filter(
 
 function leafext_query_cookie( $output, $tag ) {
 	if ( ( is_singular() || is_archive() || is_home() || is_front_page() ) && ! current_user_can( 'edit_post', get_the_ID() ) ) {
-		global $leafext_cookie;
 		global $leafext_cookie_mapid;
 		if (
 			is_admin()
 			// || is_user_logged_in()
 			|| ( 'leaflet-map' !== $tag && 'sgpx' !== $tag )
 			|| isset( $_COOKIE['leafext'] )
-			|| $leafext_cookie
 			) {
 			if ( isset( $_SERVER['REQUEST_METHOD'] ) && sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) === 'POST' ) {
 				wp_enqueue_style(
@@ -185,7 +180,7 @@ function leafext_query_cookie( $output, $tag ) {
 				}
 				$style  = substr( $style, 0, $pos );
 				$output = '<div class="leafext-dsgvo" ' . $style .
-				' background: linear-gradient(' . esc_attr( $settings['color'] ) . ',' . esc_attr( $settings['color'] ) . '), url(' . esc_url( $settings['mapurl'] ) . ');" ><div style="width: 70%;">'
+				' background: linear-gradient(' . esc_attr( $settings['color'] ) . ',' . esc_attr( $settings['color'] ) . '), url(' . esc_url( $settings['mapurl'] ) . ');" ><div style="width: 70%; max-height: 100%;">'
 				. ( $form ? $formbegin_safe . wp_kses_post( $formtext ) . $formend_safe : '' ) . '</div></div>';
 			}
 		} else {
@@ -195,7 +190,7 @@ function leafext_query_cookie( $output, $tag ) {
 				$output = substr( $output, 0, $pos );
 				$output = str_replace( 'leaflet-map WPLeafletMap', 'leafext-dsgvo', $output );
 				$output = $output .
-				' background: linear-gradient(' . esc_attr( $settings['color'] ) . ',' . esc_attr( $settings['color'] ) . '), url(' . esc_url( $settings['mapurl'] ) . ');" ><div style="width: 70%;">'
+				' background: linear-gradient(' . esc_attr( $settings['color'] ) . ',' . esc_attr( $settings['color'] ) . '), url(' . esc_url( $settings['mapurl'] ) . ');" ><div style="width: 70%; max-height: 100%;">'
 				. ( $form ? $formbegin_safe . wp_kses_post( $formtext ) . $formend_safe : '' ) . '</div></div>';
 			}
 		}
