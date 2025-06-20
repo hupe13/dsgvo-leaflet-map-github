@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || die();
 
 require_once __DIR__ . '/plugin-update-checker/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
-use YahnisElsts\PluginUpdateChecker\v5p5\Vcs\GitHubApi;
+use YahnisElsts\PluginUpdateChecker\v5p6\Vcs\GitHubApi;
 
 $token = leafext_query_token_needed();
 
