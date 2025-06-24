@@ -121,7 +121,7 @@ function leafext_submenu_of() {
 		'name' => 'Leaflet Map',
 		'icon' => $leaf,
 	);
-	$git_repos = leafext_get_repos();
+	$git_repos             = leafext_get_repos();
 	foreach ( $git_repos as $git_repo => $value ) {
 		if ( is_plugin_active( plugin_basename( $git_repos[ $git_repo ]['local'] ) ) ) {
 			foreach ( $groups as $key => $group ) {

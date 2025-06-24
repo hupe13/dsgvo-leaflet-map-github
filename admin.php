@@ -134,9 +134,13 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 
 	// Draw the menu page itself
 	function leafext_dsgvo_do_page() {
-		//phpcs:ignore WordPress.Security.NonceVerification.Recommended -- no form
-		$get        = map_deep( wp_unslash( $_GET ), 'sanitize_text_field' );
-		$active_tab = isset( $get['tab'] ) ? $get['tab'] : 'help';
+		$tab        = filter_input(
+			INPUT_GET,
+			'tab',
+			FILTER_CALLBACK,
+			array( 'options' => 'esc_html' )
+		);
+		$active_tab = $tab ? $tab : 'help';
 
 		echo '<div style="max-width: 1000px;">';
 
@@ -194,9 +198,13 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 		leafext_dsgvo_help();
 		echo '</div>' . "\n";
 
-		//phpcs:ignore WordPress.Security.NonceVerification.Recommended -- no form
-		$get        = map_deep( wp_unslash( $_GET ), 'sanitize_text_field' );
-		$active_tab = isset( $get['tab'] ) ? $get['tab'] : 'help';
+		$tab        = filter_input(
+			INPUT_GET,
+			'tab',
+			FILTER_CALLBACK,
+			array( 'options' => 'esc_html' )
+		);
+		$active_tab = $tab ? $tab : 'help';
 
 		echo '<h3 class="nav-tab-wrapper">';
 		echo '<a href="' . esc_url( '?page=' . LEAFEXT_DSGVO_PLUGIN_NAME . '&tab=help' ) . '" class="nav-tab';

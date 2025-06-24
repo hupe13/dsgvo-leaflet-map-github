@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DSGVO snippet for Leaflet Map and its Extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-20 08:13+0000\n"
+"POT-Creation-Date: 2025-06-24 13:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,8 +16,12 @@ msgstr ""
 "X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Domain: dsgvo-leaflet-map"
 
+#: admin/help-style.php:39 admin/help-style.php:53
+msgid "\"Text\""
+msgstr ""
+
 #. %s are leafext-cookie-time and leafext-delete-cookie
-#: admin/help.php:173
+#: admin/help-time-delete.php:27
 #, php-format
 msgid ""
 "%1$s shows the time when the cookie was set and %2$s displays a button to "
@@ -25,7 +29,7 @@ msgid ""
 msgstr ""
 
 #. %s are the shortcode
-#: admin/help.php:116
+#: admin/help-shortcode.php:34
 #, php-format
 msgid ""
 "All content between %1$s and %2$s will only be displayed if the user agrees. "
@@ -38,11 +42,11 @@ msgstr ""
 msgid "An example is %1$shere%2$s"
 msgstr ""
 
-#: admin/help.php:76 admin/help.php:145
+#: admin/help-shortcode.php:63 admin/help.php:76
 msgid "and"
 msgstr ""
 
-#: admin/help.php:126
+#: admin/help-shortcode.php:44
 msgid "any content, but not a shortcode"
 msgstr ""
 
@@ -50,7 +54,7 @@ msgstr ""
 msgid "Color of the background"
 msgstr ""
 
-#: admin/help.php:267
+#: admin/help-style.php:66
 msgid "Content of WordPress \"Delete\" button or option"
 msgstr ""
 
@@ -58,12 +62,12 @@ msgstr ""
 msgid "Cookie Lifetime"
 msgstr ""
 
-#: admin.php:210
+#: admin.php:221
 msgid "cookie-time & delete-cookie"
 msgstr ""
 
 #. %s are leafext-cookie-time and leafext-delete-cookie
-#: admin/help.php:189
+#: admin/help-time-delete.php:43
 #, php-format
 msgid "Date and time format, see %1$sCustomize date and time format%2$s."
 msgstr ""
@@ -72,7 +76,7 @@ msgstr ""
 msgid "days"
 msgstr ""
 
-#: php/time-delete.php:48
+#: php/time-delete.php:54
 msgid "Delete"
 msgstr ""
 
@@ -88,20 +92,24 @@ msgstr ""
 msgid "enable"
 msgstr ""
 
-#: admin/help.php:148
+#: admin/help-shortcode.php:66
 msgid "Example"
 msgstr ""
 
-#: admin/help.php:203
+#: admin/help-time-delete.php:71
 msgid "Examples"
 msgstr ""
 
-#: admin/help.php:196
-msgid "extra text to display after date and time."
+#. %s is "link"
+#: admin/help-time-delete.php:56
+#, php-format
+msgid "extra text to display after date and time or %s."
 msgstr ""
 
-#: admin/help.php:194
-msgid "extra text to display before date and time."
+#. %s is "link"
+#: admin/help-time-delete.php:50
+#, php-format
+msgid "extra text to display before date and time %s."
 msgstr ""
 
 #: admin/help.php:78
@@ -124,7 +132,7 @@ msgstr ""
 msgid "Go to"
 msgstr ""
 
-#: admin.php:201
+#: admin.php:212
 msgid "Help"
 msgstr ""
 
@@ -137,6 +145,13 @@ msgstr ""
 msgid "hupe13"
 msgstr ""
 
+#. %s is "delete"
+#: admin/help-time-delete.php:66
+#, php-format
+msgid ""
+"If specified, display instead a submit button a link with the content of %s."
+msgstr ""
+
 #. %s is a link.
 #: admin/help.php:84
 #, php-format
@@ -147,7 +162,7 @@ msgstr ""
 msgid "is active."
 msgstr ""
 
-#: admin/help.php:185
+#: admin/help-time-delete.php:39
 msgid "local time of the web server (default) or GMT time"
 msgstr ""
 
@@ -163,7 +178,7 @@ msgstr ""
 msgid "only first"
 msgstr ""
 
-#: admin/help.php:135 admin/help.php:182
+#: admin/help-shortcode.php:53 admin/help-time-delete.php:36
 msgid "Options"
 msgstr ""
 
@@ -171,7 +186,7 @@ msgstr ""
 msgid "Options GDPR"
 msgstr ""
 
-#: admin/help.php:254 admin/help.php:257
+#: admin/help-style.php:53 admin/help-style.php:56
 msgid "or option"
 msgstr ""
 
@@ -197,11 +212,12 @@ msgid ""
 "Map."
 msgstr ""
 
-#: admin/help.php:232
+#: admin/help-style.php:31
 msgid "See also the content of"
 msgstr ""
 
-#: admin/help.php:240 admin/help.php:241 admin/help.php:254 admin/help.php:257
+#: admin/help-style.php:39 admin/help-style.php:40 admin/help-style.php:53
+#: admin/help-style.php:56
 msgid "Setting of"
 msgstr ""
 
@@ -210,13 +226,13 @@ msgid "Settings"
 msgstr ""
 
 #. %s is leafext_cookie
-#: admin/help.php:96
+#: admin/help-shortcode.php:14
 #, php-format
 msgid "Shortcode %s"
 msgstr ""
 
 #. %s is leafext_cookie
-#: admin/help.php:160
+#: admin/help-time-delete.php:14
 #, php-format
 msgid "Shortcodes %1$s and %2$s"
 msgstr ""
@@ -227,12 +243,12 @@ msgid ""
 "map?"
 msgstr ""
 
-#: admin.php:214 admin/help.php:220
+#: admin.php:225 admin/help-style.php:19
 msgid "Styling"
 msgstr ""
 
-#: php/leaflet-map.php:20 admin/help.php:145 admin/help.php:241
-#: admin/help.php:257
+#: php/leaflet-map.php:20 admin/help-shortcode.php:63 admin/help-style.php:40
+#: admin/help-style.php:56
 msgid "Submit Button"
 msgstr ""
 
@@ -240,21 +256,20 @@ msgstr ""
 msgid "Test it in a private browser window."
 msgstr ""
 
-#: php/leaflet-map.php:15 admin/help.php:145 admin/help.php:240
-#: admin/help.php:254
+#: php/leaflet-map.php:15 admin/help-shortcode.php:63
 msgid "Text"
 msgstr ""
 
-#: admin/help.php:200
+#: admin/help-time-delete.php:62
 msgid "Text of submit button. Default: Content of WordPress \"Delete\" button."
 msgstr ""
 
-#: admin/help.php:198
+#: admin/help-time-delete.php:60
 msgid "text to display if the cookie is not set."
 msgstr ""
 
 #. %s are options
-#: admin/help.php:139
+#: admin/help-shortcode.php:57
 #, php-format
 msgid ""
 "The options %1$s and %2$s are optional. Defaults are the %3$ssettings%4$s of"
@@ -279,19 +294,19 @@ msgid ""
 "no maps will be displayed."
 msgstr ""
 
-#: admin/help.php:223
+#: admin/help-style.php:22
 msgid ""
 "You can use following classes to style the the text area and the buttons:"
 msgstr ""
 
 #. %s is the shortcode
-#: admin/help.php:108
+#: admin/help-shortcode.php:26
 #, php-format
 msgid "You can use the shortcode %1$s anywhere in your pages / posts."
 msgstr ""
 
 #. %s are options
-#: admin/help.php:131
+#: admin/help-shortcode.php:49
 #, php-format
 msgid ""
 "You can’t write another shortcode in %s shortcode, because WordPress doesn’t "

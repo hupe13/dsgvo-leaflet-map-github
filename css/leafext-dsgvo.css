@@ -16,3 +16,7 @@
 [id^='map_'] {
 	scroll-margin-top: 100px;
 }
+
+[id='deletecookielink'] {
+	display: inline;
+}

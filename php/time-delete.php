@@ -32,7 +32,7 @@ function leafext_get_cookie_time( $atts, $content ) {
 			$content = $before . $content . $after;
 
 		} else {
-			$content = isset( $atts['noset'] ) ? $atts['noset'] : '';
+			$content = isset( $atts['unset'] ) ? $atts['unset'] : '';
 		}
 	}
 	return $content;
@@ -42,17 +42,40 @@ add_shortcode( 'leafext-cookie-time', 'leafext_get_cookie_time' );
 function leafext_form_delete_cookie( $atts, $content ) {
 	if ( is_singular() || is_archive() || is_home() || is_front_page() ) {
 		if ( isset( $_COOKIE['leafext'] ) ) {
+			wp_enqueue_style(
+				'leafext-dsgvo-css',
+				plugins_url( 'css/leafext-dsgvo.css', LEAFEXT_DSGVO_PLUGIN_FILE ),
+				array(),
+				LEAFEXT_DSGVO_PLUGIN_VERSION
+			);
 			if ( isset( $atts['delete'] ) ) {
 				$submit = $atts['delete'];
 			} else {
 				$submit = __( 'Delete', 'dsgvo-leaflet-map' );
 			}
-			$content  = '<form method="post">' . "\n";
-			$content .= '<input type="hidden" name="cookie" value="delete">' . "\n";
-			$content .= '<input type="hidden" name="origin" value=' . get_permalink( get_the_ID() ) . '>' . "\n";
-			$content .= wp_nonce_field( 'leafext_dsgvo', 'leafext_dsgvo_cookie' ) . "\n";
-			$content .= '<div class="submit leafext-dsgvo-submit leafext-dsgvo-delete-submit"><input type="submit" aria-label="Submit ' . esc_attr( $submit ) . '" value="' . esc_attr( $submit ) . '" name="leafext_cookie_button" /></div>' . "\n";
-			$content .= '</form>' . "\n";
+			if ( isset( $atts[0] ) && $atts[0] === 'link' ) {
+				$content = '<form id="deletecookielink" method="post">';
+			} else {
+				$content = '<form id="deletecookie" method="post">';
+			}
+			$content .= '<input type="hidden" name="cookie" value="delete">';
+			$content .= '<input type="hidden" name="origin" value=' . get_permalink( get_the_ID() ) . '>';
+			$content .= wp_nonce_field( 'leafext_dsgvo', 'leafext_dsgvo_cookie' );
+			if ( isset( $atts[0] ) && $atts[0] === 'link' ) {
+				$content .= '<input type="hidden" value="' . esc_attr( $submit ) . '" name="leafext_cookie_button" />';
+				$content .= '&nbsp;<a href="javascript:;" onclick="parentNode.submit();">' . $submit . '</a>&nbsp;';
+			} else {
+				$content .= '<div class="submit leafext-dsgvo-submit leafext-dsgvo-delete-submit">';
+				$content .= '<input type="submit" aria-label="Submit ' . esc_attr( $submit ) . '" value="' . esc_attr( $submit ) . '" name="leafext_cookie_button" />';
+				$content .= '</div>';
+			}
+			$content .= '</form>';
+			$before   = isset( $atts['before'] ) ? '<div class="cookietext">' . $atts['before'] : '';
+			$after    = isset( $atts['after'] ) ? $atts['after'] . '</div>' : '';
+
+			$content = $before . $content . $after;
+		} else {
+			$content = isset( $atts['unset'] ) ? $atts['unset'] : '';
 		}
 	}
 	return $content;

@@ -30,31 +30,45 @@ function leafext_dsgvo_time_delete_help() {
 	);
 
 	$text .= '<h3>Code</h3>';
-	$text .= '<p><pre' . $codestyle . '><code' . $codestyle . '>&#091;leafext-cookie-time gmt=0/1 before="..." format="..." after="..." noset="..."]</code></pre></p>';
-	$text .= '<p><pre' . $codestyle . '><code' . $codestyle . '>&#091;leafext-delete-cookie delete="..."]</code></pre></p>';
+	$text .= '<p><pre' . $codestyle . '><code' . $codestyle . '>&#091;leafext-cookie-time gmt=0/1 format="..." before="..." after="..." unset="..."]</code></pre></p>';
+	$text .= '<p><pre' . $codestyle . '><code' . $codestyle . '>&#091;leafext-delete-cookie delete="..." before="..." after="..." unset="..." link]</code></pre></p>';
 
 	$text .= '<h3>' . __( 'Options', 'dsgvo-leaflet-map' ) . '</h3>';
 
-	$text = $text . '<p><ul>';
-	$text = $text . '<li style="list-style-type:disc;margin-left: 1.5em;"><code>gmt</code> - ' . __( 'local time of the web server (default) or GMT time', 'dsgvo-leaflet-map' ) . '</li>';
-	$text = $text . '<li style="list-style-type:disc;margin-left: 1.5em;"><code>format</code> - ' .
+	$text .= '<p><ul>';
+	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>gmt</code> - ' . __( 'local time of the web server (default) or GMT time', 'dsgvo-leaflet-map' ) . '</li>';
+	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>format</code> - ' .
 	sprintf(
 		/* translators: %s are leafext-cookie-time and leafext-delete-cookie */
 		__( 'Date and time format, see %1$sCustomize date and time format%2$s.', 'dsgvo-leaflet-map' ),
 		'<a href="https://wordpress.org/documentation/article/customize-date-and-time-format/">',
 		'</a>'
 	) . '</li>';
-	$text = $text . '<li style="list-style-type:disc;margin-left: 1.5em;"><code>before</code> - '
-	. __( 'extra text to display before date and time.', 'dsgvo-leaflet-map' ) . '</li>';
-	$text = $text . '<li style="list-style-type:disc;margin-left: 1.5em;"><code>after</code> - '
-	. __( 'extra text to display after date and time.', 'dsgvo-leaflet-map' ) . '</li>';
-	$text = $text . '<li style="list-style-type:disc;margin-left: 1.5em;"><code>noset</code> - '
+	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>before</code> - '
+	. sprintf(
+		/* translators: %s is "link" */
+		__( 'extra text to display before date and time %s.', 'dsgvo-leaflet-map' ),
+		'<code>link</code>'
+	) . '</li>';
+	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>after</code> - '
+	. sprintf(
+		/* translators: %s is "link" */
+		__( 'extra text to display after date and time or %s.', 'dsgvo-leaflet-map' ),
+		'<code>link</code>'
+	) . '</li>';
+	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>unset</code> - '
 	. __( 'text to display if the cookie is not set.', 'dsgvo-leaflet-map' ) . '</li>';
-	$text = $text . '<li style="list-style-type:disc;margin-left: 1.5em;"><code>delete</code> - '
+	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>delete</code> - '
 	. __( 'Text of submit button. Default: Content of WordPress "Delete" button.', 'dsgvo-leaflet-map' ) . '</li>';
-	$text = $text . '</ul></p>';
+	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>link</code> - '
+	. sprintf(
+		/* translators: %s is "delete" */
+		__( 'If specified, display instead a submit button a link with the content of %s.', 'dsgvo-leaflet-map' ),
+		'<code>delete</code>'
+	) . '</li>';
+	$text .= '</ul></p>';
 
-	$text = $text . '<h3><a href="https://leafext.de/extra/dsgvo-cookie/">' . __( 'Examples', 'dsgvo-leaflet-map' ) . '</a></h3>';
+	$text .= '<h3><a href="https://leafext.de/extra/dsgvo-cookie/">' . __( 'Examples', 'dsgvo-leaflet-map' ) . '</a></h3>';
 
 	if ( is_singular() || is_archive() ) {
 		return $text;
