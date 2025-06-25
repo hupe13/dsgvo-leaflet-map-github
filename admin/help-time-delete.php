@@ -44,10 +44,12 @@ function leafext_dsgvo_time_delete_help() {
 		'<a href="https://wordpress.org/documentation/article/customize-date-and-time-format/">',
 		'</a>'
 	) . '</li>';
+	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>delete</code> - '
+	. __( 'Text of submit button. Default: Content of WordPress "Delete" button.', 'dsgvo-leaflet-map' ) . '</li>';
 	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>before</code> - '
 	. sprintf(
 		/* translators: %s is "link" */
-		__( 'extra text to display before date and time %s.', 'dsgvo-leaflet-map' ),
+		__( 'extra text to display before date and time or %s.', 'dsgvo-leaflet-map' ),
 		'<code>link</code>'
 	) . '</li>';
 	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>after</code> - '
@@ -58,8 +60,6 @@ function leafext_dsgvo_time_delete_help() {
 	) . '</li>';
 	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>unset</code> - '
 	. __( 'text to display if the cookie is not set.', 'dsgvo-leaflet-map' ) . '</li>';
-	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>delete</code> - '
-	. __( 'Text of submit button. Default: Content of WordPress "Delete" button.', 'dsgvo-leaflet-map' ) . '</li>';
 	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>link</code> - '
 	. sprintf(
 		/* translators: %s is "delete" */
