@@ -26,8 +26,8 @@ function leafext_get_cookie_time( $atts, $content ) {
 				$content = wp_date( $format, $cookie_time );
 			}
 
-			$before = isset( $atts['before'] ) ? $atts['before'] : '';
-			$after  = isset( $atts['after'] ) ? $atts['after'] : '';
+			$before   = isset( $atts['before'] ) ? '<div class="cookietext">' . $atts['before'] : '';
+			$after    = isset( $atts['after'] ) ? $atts['after'] . '</div>' : '';
 
 			$content = $before . $content . $after;
 
