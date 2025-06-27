@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DSGVO snippet for Leaflet Map and its Extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-27 15:10+0000\n"
+"POT-Creation-Date: 2025-06-27 15:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -34,6 +34,10 @@ msgstr ""
 msgid ""
 "All content between %1$s and %2$s will only be displayed if the user agrees. "
 "The cookie is the same %3$s."
+msgstr ""
+
+#: admin/help-time-delete.php:39
+msgid "All options are optional."
 msgstr ""
 
 #. %s are hrefs.
@@ -67,7 +71,7 @@ msgid "cookie-time & delete-cookie"
 msgstr ""
 
 #. %s are leafext-cookie-time and leafext-delete-cookie
-#: admin/help-time-delete.php:44
+#: admin/help-time-delete.php:46
 #, php-format
 msgid "Date and time format, see %1$sCustomize date and time format%2$s."
 msgstr ""
@@ -78,6 +82,10 @@ msgstr ""
 
 #: php/time-delete.php:54
 msgid "Delete"
+msgstr ""
+
+#: admin/help-time-delete.php:53
+msgid "Display instead a submit button a link with the content."
 msgstr ""
 
 #. Name of the plugin
@@ -96,18 +104,18 @@ msgstr ""
 msgid "Example"
 msgstr ""
 
-#: admin/help-time-delete.php:68
+#: admin/help-time-delete.php:70
 msgid "Examples"
 msgstr ""
 
 #. %s is "link"
-#: admin/help-time-delete.php:61
+#: admin/help-time-delete.php:63
 #, php-format
 msgid "extra text to display after date and time or %s."
 msgstr ""
 
 #. %s is "link"
-#: admin/help-time-delete.php:55
+#: admin/help-time-delete.php:57
 #, php-format
 msgid "extra text to display before date and time or %s."
 msgstr ""
@@ -155,6 +163,10 @@ msgstr ""
 msgid "is active."
 msgstr ""
 
+#: admin/help-time-delete.php:42
+msgid "Local time of the web server (default) or GMT time"
+msgstr ""
+
 #: dsgvo-leaflet-map.php:71
 msgid "Manage plugins"
 msgstr ""
@@ -165,20 +177,6 @@ msgstr ""
 
 #: admin.php:83
 msgid "only first"
-msgstr ""
-
-#: admin/help-time-delete.php:51
-msgid "Optional. Display instead a submit button a link with the content."
-msgstr ""
-
-#: admin/help-time-delete.php:40
-msgid "Optional. Local time of the web server (default) or GMT time"
-msgstr ""
-
-#: admin/help-time-delete.php:49
-msgid ""
-"Optional. Text of submit button. Default: Content of WordPress \"Delete\" "
-"button."
 msgstr ""
 
 #: admin/help-shortcode.php:53 admin/help-time-delete.php:37
@@ -263,7 +261,11 @@ msgstr ""
 msgid "Text"
 msgstr ""
 
-#: admin/help-time-delete.php:65
+#: admin/help-time-delete.php:51
+msgid "Text of submit button. Default: Content of WordPress \"Delete\" button."
+msgstr ""
+
+#: admin/help-time-delete.php:67
 msgid "text to display if the cookie is not set."
 msgstr ""
 

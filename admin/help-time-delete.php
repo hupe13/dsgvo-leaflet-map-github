@@ -36,8 +36,10 @@ function leafext_dsgvo_time_delete_help() {
 
 	$text .= '<h3>' . __( 'Options', 'dsgvo-leaflet-map' ) . '</h3>';
 
+	$text .= '<p>' . __( 'All options are optional.', 'dsgvo-leaflet-map' ) . '</p>';
+
 	$text .= '<p><ul>';
-	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>gmt</code> - ' . __( 'Optional. Local time of the web server (default) or GMT time', 'dsgvo-leaflet-map' ) . '</li>';
+	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>gmt</code> - ' . __( 'Local time of the web server (default) or GMT time', 'dsgvo-leaflet-map' ) . '</li>';
 	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>format</code> - ' .
 	sprintf(
 		/* translators: %s are leafext-cookie-time and leafext-delete-cookie */
@@ -46,9 +48,9 @@ function leafext_dsgvo_time_delete_help() {
 		'</a>'
 	) . '</li>';
 	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>button</code> - '
-	. __( 'Optional. Text of submit button. Default: Content of WordPress "Delete" button.', 'dsgvo-leaflet-map' ) . '</li>';
+	. __( 'Text of submit button. Default: Content of WordPress "Delete" button.', 'dsgvo-leaflet-map' ) . '</li>';
 	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>link</code> - '
-	. __( 'Optional. Display instead a submit button a link with the content.', 'dsgvo-leaflet-map' ) . '</li>';
+	. __( 'Display instead a submit button a link with the content.', 'dsgvo-leaflet-map' ) . '</li>';
 	$text .= '<li style="list-style-type:disc;margin-left: 1.5em;"><code>before</code> - '
 	. sprintf(
 		/* translators: %s is "link" */
