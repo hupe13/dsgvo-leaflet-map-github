@@ -48,20 +48,21 @@ function leafext_form_delete_cookie( $atts, $content ) {
 				array(),
 				LEAFEXT_DSGVO_PLUGIN_VERSION
 			);
-			if ( isset( $atts['delete'] ) ) {
-				$submit = $atts['delete'];
+			if ( isset( $atts['button'] ) ) {
+				$submit = $atts['button'];
 			} else {
 				$submit = __( 'Delete', 'dsgvo-leaflet-map' );
 			}
-			if ( isset( $atts[0] ) && $atts[0] === 'link' ) {
+			if ( isset( $atts['link'] ) ) {
 				$content = '<form id="deletecookielink" method="post">';
+				$submit = $atts['link'];
 			} else {
 				$content = '<form id="deletecookie" method="post">';
 			}
 			$content .= '<input type="hidden" name="cookie" value="delete">';
 			$content .= '<input type="hidden" name="origin" value=' . get_permalink( get_the_ID() ) . '>';
 			$content .= wp_nonce_field( 'leafext_dsgvo', 'leafext_dsgvo_cookie' );
-			if ( isset( $atts[0] ) && $atts[0] === 'link' ) {
+			if ( isset( $atts['link'] ) ) {
 				$content .= '<input type="hidden" value="' . esc_attr( $submit ) . '" name="leafext_cookie_button" />';
 				$content .= '&nbsp;<a href="javascript:;" onclick="parentNode.submit();">' . $submit . '</a>&nbsp;';
 			} else {
