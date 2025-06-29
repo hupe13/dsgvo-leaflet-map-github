@@ -52,14 +52,24 @@ function leafext_dsgvo_short_code_help() {
 
 	$text .= '<h3>' . __( 'Options', 'dsgvo-leaflet-map' ) . '</h3>';
 
-	$text .= '<p>' . sprintf(
-		/* translators: %s are options */
-		__( 'The options %1$s and %2$s are optional. Defaults are the %3$ssettings%4$s of', 'dsgvo-leaflet-map' ),
-		'<code>text</code>',
-		'<code>okay</code>',
-		'<a href="' . esc_url( '?page=' . LEAFEXT_DSGVO_PLUGIN_NAME . '&tab=help' ) . '">',
-		'</a>'
-	);
+	if ( is_singular() || is_archive() ) {
+		$text .= '<p>' . sprintf(
+			/* translators: %s are options */
+			__( 'The options %1$s and %2$s are optional. Defaults are the settings of', 'dsgvo-leaflet-map' ),
+			'<code>text</code>',
+			'<code>okay</code>'
+		);
+	} else {
+		$text .= '<p>' . sprintf(
+			/* translators: %s are options */
+			__( 'The options %1$s and %2$s are optional. Defaults are the %3$ssettings%4$s of', 'dsgvo-leaflet-map' ),
+			'<code>text</code>',
+			'<code>okay</code>',
+			'<a href="' . esc_url( '?page=' . LEAFEXT_DSGVO_PLUGIN_NAME . '&tab=help' ) . '">',
+			'</a>'
+		);
+	}
+
 	$text .= ' <b>' . __( 'Text', 'dsgvo-leaflet-map' ) . '</b> ' . __( 'and', 'dsgvo-leaflet-map' ) . ' <b>' . __( 'Submit Button', 'dsgvo-leaflet-map' ) . '</b>.';
 	$text .= '</p>';
 
