@@ -1,4 +1,4 @@
-###  2506xx
+###  250701 / Plugins WordPress Version 2.4
 
 * New shortcodes leafext-cookie-time and leafext-delete-cookie
 * Styling (css)
