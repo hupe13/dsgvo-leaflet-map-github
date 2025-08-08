@@ -50,8 +50,7 @@ Documentation in <a href="https://leafext.de/doku/dsgvo/">German</a>, <a href="h
 * Then install this plugin: Download the <a href="https://github.com/hupe13/extensions-leaflet-map-dsgvo/archive/refs/heads/main.zip">ZIP file</a> and install it on the plugin page of your WordPress installation.
 * Go to Settings - Leaflet Map - Leaflet Map GDPR and get documentation and settings options.
 
-You will get updates with the [Plugin Update Checker](https://github.com/YahnisElsts/plugin-update-checker).
-Maybe you need a Github token.
+Please install [leafext-update-github](https://github.com/hupe13/leafext-update-github) to get updates and keep an eye on this repository in case I've made any mistakes.
 
 ## Frequently Asked Questions
 
@@ -61,10 +60,9 @@ Maybe you need a Github token.
 
 ## Changelog
 
-### 250701
+### 2508xx
 
-* New shortcodes leafext-cookie-time and leafext-delete-cookie
-* Styling (css)
+* fixed: leafext_plugin_active did not work with network activated plugins
 
 ### Previous
 

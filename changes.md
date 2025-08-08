@@ -1,3 +1,7 @@
+### 2508xx / Plugins WordPress Version 2.4.1
+
+* fixed: leafext_plugin_active did not work with network activated plugins
+
 ###  250701 / Plugins WordPress Version 2.4
 
 * New shortcodes leafext-cookie-time and leafext-delete-cookie

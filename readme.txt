@@ -3,7 +3,7 @@
 Contributors: hupe13
 Tags: dsgvo, gdpr, leaflet
 Tested up to: 6.8
-Stable tag: 250701
+Stable tag: 250808
 Requires at least: 6.0
 Requires PHP: 7.4
 License: GPLv2 or later
@@ -45,5 +45,4 @@ Konfiguriere seine Einstellungen unter Leaflet Map -> Leaflet Map DSGVO.
 - Select Install Now.
 - Configure its settings at Leaflet Map -> Leaflet Map GDPR.
 
-You will get updates with the [Plugin Update Checker](https://github.com/YahnisElsts/plugin-update-checker).
-Maybe you need a Github token.
+Please install [leafext-update-github](https://github.com/hupe13/leafext-update-github) to get updates and keep an eye on this repository in case I've made any mistakes.
