@@ -4,7 +4,7 @@
  * Description:       Respect the DSGVO / GDPR when you use Leaflet Map and Extensions for Leaflet Map.
  * Plugin URI:        https://leafext.de/en/
  * Update URI:        https://github.com/hupe13/dsgvo-leaflet-map-github
- * Version:           250809
+ * Version:           250822
  * Requires PHP:      7.4
  * Requires Plugins:  leaflet-map, extensions-leaflet-map
  * Author:            hupe13
@@ -66,29 +66,32 @@ if ( is_admin() ) {
 }
 
 // WP < 6.5, ClassicPress
-function leafext_extensions_require() {
-	if ( ! leafext_plugin_active( 'extensions-leaflet-map' ) ) {
-		deactivate_plugins( plugin_basename( __FILE__ ) );
-		$message = '<div><p>' . sprintf(
-			/* translators: %s is a link. */
-			esc_html__( 'Please install and activate %1$sExtensions for Leaflet Map%2$s before using DSGVO snippet for Leaflet Map and its Extensions.', 'dsgvo-leaflet-map' ),
-			'<a href="https://wordpress.org/plugins/extensions-leaflet-map/">',
-			'</a>'
-		) . '</p><p><a href="' . esc_html( network_admin_url( 'plugins.php' ) ) . '">' .
-			__( 'Manage plugins', 'dsgvo-leaflet-map' ) . '</a>.</p></div>';
-		$error = new WP_Error(
-			'error',
-			$message,
-			array(
-				'title'    => __( 'Plugin Error', 'dsgvo-leaflet-map' ),
-				'response' => '406',
-			)
-		);
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- it is an WP Error
-		wp_die( $error, '', wp_kses_post( $error->get_error_data() ) );
+if ( function_exists( 'classicpress_version' ) ||
+( function_exists( 'wp_get_wp_version' ) && version_compare( '6.5', wp_get_wp_version(), '>' ) ) ) {
+	function leafext_extensions_require() {
+		if ( ! leafext_plugin_active( 'extensions-leaflet-map' ) ) {
+			deactivate_plugins( plugin_basename( __FILE__ ) );
+			$message = '<div><p>' . sprintf(
+				/* translators: %s is a link. */
+				esc_html__( 'Please install and activate %1$sExtensions for Leaflet Map%2$s before using DSGVO snippet for Leaflet Map and its Extensions.', 'dsgvo-leaflet-map' ),
+				'<a href="https://wordpress.org/plugins/extensions-leaflet-map/">',
+				'</a>'
+			) . '</p><p><a href="' . esc_html( network_admin_url( 'plugins.php' ) ) . '">' .
+				__( 'Manage plugins', 'dsgvo-leaflet-map' ) . '</a>.</p></div>';
+			$error = new WP_Error(
+				'error',
+				$message,
+				array(
+					'title'    => __( 'Plugin Error', 'dsgvo-leaflet-map' ),
+					'response' => '406',
+				)
+			);
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- it is an WP Error
+			wp_die( $error, '', wp_kses_post( $error->get_error_data() ) );
+		}
 	}
+	register_activation_hook( __FILE__, 'leafext_extensions_require' );
 }
-register_activation_hook( __FILE__, 'leafext_extensions_require' );
 
 // Disable activation the other of WP / Github Version
 if ( ! function_exists( 'leafext_disable_dsgvo_activation' ) ) {

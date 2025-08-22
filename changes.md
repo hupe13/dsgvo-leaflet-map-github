@@ -1,6 +1,7 @@
-### 2508xx / Plugins WordPress Version 2.4.1
+### 250822 / Plugins WordPress Version 3.0
 
 * fixed: leafext_plugin_active did not work with network activated plugins
+* The version 2.4 should be 3.0, as there were new shortcodes.
 
 ###  250701 / Plugins WordPress Version 2.4
 
