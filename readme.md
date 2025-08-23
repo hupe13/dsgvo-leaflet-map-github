@@ -63,7 +63,7 @@ Please install [leafext-update-github](https://github.com/hupe13/leafext-update-
 ### 3.0
 
 * fixed: leafext_plugin_active did not work with network activated plugins
-* The version 2.4 should be 3.0, as there were new shortcodes.
+* The version 2.4 should be 3.0, as there were new shortcodes. That's why this is is 3.0.
 * Dealing with dependency from Extensions Leaflet Map if WP < 6.5
 
 ### Previous
