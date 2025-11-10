@@ -2,10 +2,10 @@
 
 Contributors: hupe13
 Tags: dsgvo, gdpr, leaflet
-Tested up to: 6.8
-Stable tag: 250823
-Requires at least: 6.0
-Requires PHP: 7.4
+Tested up to: 6.9
+Stable tag: 251110
+Requires at least: 6.3
+Requires PHP: 8.1
 License: GPLv2 or later
 
 Respect the DSGVO / GDPR when you use Leaflet Map and Extensions for Leaflet Map.
@@ -45,4 +45,4 @@ Konfiguriere seine Einstellungen unter Leaflet Map -> Leaflet Map DSGVO.
 - Select Install Now.
 - Configure its settings at Leaflet Map -> Leaflet Map GDPR.
 
-Please install [leafext-update-github](https://github.com/hupe13/leafext-update-github) to get updates and keep an eye on this repository in case I've made any mistakes.
+Please install [ghu-update-puc](https://github.com/hupe13/ghu-update-puc) to get updates and keep an eye on this repository in case I've made any mistakes.

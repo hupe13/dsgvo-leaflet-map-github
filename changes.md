@@ -1,3 +1,9 @@
+### 251xxx / Plugins WordPress Version 3.1
+
+* Tested with WordPress 6.9
+* PCP V 1.7.0 checks reviewed
+* minimum php version 8.1
+
 ### 250823 / Plugins WordPress Version 3.0
 
 * fixed: leafext_plugin_active did not work with network activated plugins

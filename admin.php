@@ -156,8 +156,8 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 			include_once LEAFEXT_DSGVO_PLUGIN_DIR . 'admin/help-style.php';
 			echo wp_kses_post( leafext_dsgvo_css_help() );
 		} else {
-			if ( function_exists( 'leafext_updates_from_github' ) ) {
-				leafext_updates_from_github();
+			if ( function_exists( 'leafext_dsgvo_updates_from_github' ) ) {
+				leafext_dsgvo_updates_from_github();
 			}
 			leafext_dsgvo_main_help();
 		}

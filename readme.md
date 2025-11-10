@@ -2,10 +2,10 @@
 
 Contributors: hupe13  
 Tags: dsgvo, gdpr, leaflet  
-Tested up to: 6.8  
-Stable tag: 3.0  
-Requires at least: 6.0  
-Requires PHP: 7.4  
+Tested up to: 6.9  
+Stable tag: 3.1  
+Requires at least: 6.3  
+Requires PHP: 8.1  
 License: GPLv2 or later  
 
 Respect the DSGVO / GDPR when you use Leaflet Map and Extensions for Leaflet Map.
@@ -50,7 +50,7 @@ Documentation in <a href="https://leafext.de/doku/dsgvo/">German</a>, <a href="h
 * Then install this plugin: Download the <a href="https://github.com/hupe13/extensions-leaflet-map-dsgvo/archive/refs/heads/main.zip">ZIP file</a> and install it on the plugin page of your WordPress installation.
 * Go to Settings - Leaflet Map - Leaflet Map GDPR and get documentation and settings options.
 
-Please install [leafext-update-github](https://github.com/hupe13/leafext-update-github) to get updates and keep an eye on this repository in case I've made any mistakes.
+Please install [ghu-update-puc](https://github.com/hupe13/ghu-update-puc) to get updates and keep an eye on this repository in case I've made any mistakes.
 
 ## Frequently Asked Questions
 
@@ -60,11 +60,11 @@ Please install [leafext-update-github](https://github.com/hupe13/leafext-update-
 
 ## Changelog
 
-### 3.0
+### 3.1
 
-* fixed: leafext_plugin_active did not work with network activated plugins
-* The version 2.4 should be 3.0, as there were new shortcodes. That's why this is is 3.0.
-* Dealing with dependency from Extensions Leaflet Map if WP < 6.5
+* Tested with WordPress 6.9
+* PCP V 1.7.0 checks reviewed
+* minimum php version 8.1
 
 ### Previous
 

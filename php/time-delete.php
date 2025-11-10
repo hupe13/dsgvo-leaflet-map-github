@@ -26,8 +26,8 @@ function leafext_get_cookie_time( $atts, $content ) {
 				$content = wp_date( $format, $cookie_time );
 			}
 
-			$before   = isset( $atts['before'] ) ? '<div class="cookietext">' . $atts['before'] : '';
-			$after    = isset( $atts['after'] ) ? $atts['after'] . '</div>' : '';
+			$before = isset( $atts['before'] ) ? '<div class="cookietext">' . $atts['before'] : '';
+			$after  = isset( $atts['after'] ) ? $atts['after'] . '</div>' : '';
 
 			$content = $before . $content . $after;
 
@@ -55,7 +55,7 @@ function leafext_form_delete_cookie( $atts, $content ) {
 			}
 			if ( isset( $atts['link'] ) ) {
 				$content = '<form id="deletecookielink" method="post">';
-				$submit = $atts['link'];
+				$submit  = $atts['link'];
 			} else {
 				$content = '<form id="deletecookie" method="post">';
 			}
