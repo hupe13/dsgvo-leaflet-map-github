@@ -1,3 +1,7 @@
+### 3.2
+
+* WordPress 6.9.1 enqueue warning fixed
+
 ### 251114 / Plugins WordPress Version 3.1
 
 * Tested with WordPress 6.9

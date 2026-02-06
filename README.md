@@ -60,11 +60,9 @@ Please install [ghu-update-puc](https://github.com/hupe13/ghu-update-puc) to get
 
 ## Changelog
 
-### 3.1
+### 3.2
 
-* Tested with WordPress 6.9
-* PCP V 1.7.0 checks reviewed
-* minimum php version 8.1
+* WordPress 6.9.1 enqueue warning fixed
 
 ### Previous
 
