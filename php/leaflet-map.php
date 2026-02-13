@@ -131,10 +131,6 @@ function leafext_query_cookie( $output, $tag ) {
 
 		if ( ! isset( $leafext_okay ) ) {
 			$leafext_okay = true;
-			wp_dequeue_style( 'leaflet_stylesheet' );
-			wp_dequeue_script( 'wp_leaflet_map' );
-			wp_deregister_style( 'leaflet_stylesheet' );
-			wp_deregister_script( 'wp_leaflet_map' );
 			$form = true;
 		} else {
 			$count = filter_var( $settings['count'], FILTER_VALIDATE_BOOLEAN );
@@ -202,6 +198,7 @@ add_filter( 'do_shortcode_tag', 'leafext_query_cookie', 10, 2 );
 function leafext_dequeue_missing() {
 	if ( ! isset( $_COOKIE['leafext'] ) ) {
 		leafext_dequeue_script_recursive( 'wp_leaflet_map' );
+		leafext_dequeue_script_recursive( 'leaflet_js' );
 		leafext_dequeue_style_recursive( 'leaflet_stylesheet' );
 	}
 }
