@@ -14,35 +14,45 @@ Respect the DSGVO / GDPR when you use Leaflet Map and Extensions for Leaflet Map
 
 = GDPR =
 
-There is now an official [WordPress plugin](https://wordpress.org/plugins/dsgvo-leaflet-map/) and it is not necessary for you to use this one. Unless you have a suggestion for an improvement or a new function and I ask you to test it.
+There is an official [WordPress plugin](https://wordpress.org/plugins/dsgvo-leaflet-map/) and it is not necessary for you to use this one. Unless you have a suggestion for an improvement or a new function and I ask you to test it.
 
 According to the GDPR, the user must actively agree if content is to be loaded from third-party servers.
 The WordPress plugins [Leaflet Map](https://wordpress.org/plugins/leaflet-map/) and [Extensions for Leaflet Map](https://wordpress.org/plugins/extensions-leaflet-map/) are loading content from the defined tile servers as well as unpkg.com.
 This plugin requests the user's permission to load the maps.
 You can customize the text and use it on your own responsibility.
 
-Configure its settings at Leaflet Map -> Leaflet Map GDPR.
+The plugin supports <a href="https://wordpress.org/plugins/theme-translation-for-polylang/">Theme and plugin translation for Polylang (TTfP)</a>.
 
 = DSGVO =
 
-Es gibt nun ein offizielles [WordPress Plugin](https://de.wordpress.org/plugins/dsgvo-leaflet-map/) und es ist nicht nötig, dass du dieses hier verwendest. Es sei denn, du hast einen Vorschlag für eine Verbesserung bzw. eine neue Funktion und ich bitte dich, diese zu testen.
+Es gibt ein offizielles [WordPress Plugin](https://de.wordpress.org/plugins/dsgvo-leaflet-map/) und es ist nicht nötig, dass du dieses hier verwendest. Es sei denn, du hast einen Vorschlag für eine Verbesserung bzw. eine neue Funktion und ich bitte dich, diese zu testen.
 
 Laut DSGVO muss der Nutzer aktiv zustimmen, wenn Inhalte von Drittservern geladen werden sollen.
 Die WordPress-Plugins [Leaflet Map](https://de.wordpress.org/plugins/leaflet-map/) und [Erweiterungen für Leaflet Map](https://de.wordpress.org/plugins/extensions-leaflet-map/) laden Inhalte von den definierten Kachelservern sowie unpkg.com.
 Dieses kleine Snippet holt die Zustimmung des Nutzers zum Laden der Karten ein.
 Du kannst den Text anpassen und es auf eigene Verantwortung verwenden.
 
-Konfiguriere seine Einstellungen unter Leaflet Map -> Leaflet Map DSGVO.
+Das Plugin unterstützt <a href="https://wordpress.org/plugins/theme-translation-for-polylang/">Theme and plugin translation for Polylang (TTfP)</a>.
+
+= Documentation =
+
+Documentation in <a href="https://leafext.de/doku/dsgvo/">German</a>, <a href="https://leafext.de/en/doku/dsgvo/">English</a> and an <a href="https://leafext.de/extra/dsgvo-example/">example</a>.
 
 == Installation ==
 
-- Download the [ZIP file](https://github.com/hupe13/extensions-leaflet-map-dsgvo/archive/refs/heads/main.zip).
-- Sign in to your WordPress installation.
-- In the left-hand menu, select Plugins > Add New.
-- Select Upload Plugin.
-- Select Choose File.
-- Locate and select the plugin .zip file on your local computer and then select Open.
-- Select Install Now.
-- Configure its settings at Leaflet Map -> Leaflet Map GDPR.
+* Install and configure the plugin <a href="https://wordpress.org/plugins/leaflet-map/">Leaflet Map</a>.
+* Install and configure the plugin <a href="https://wordpress.org/plugins/extensions-leaflet-map/">Extensions for Leaflet Map</a>.
+* Then install this plugin: Download the <a href="https://github.com/hupe13/extensions-leaflet-map-dsgvo/archive/refs/heads/main.zip">ZIP file</a> and install it on the plugin page of your WordPress installation.
+* Go to Settings - Leaflet Map - Leaflet Map GDPR and get documentation and settings options.
 
 Please install [ghu-update-puc](https://github.com/hupe13/ghu-update-puc) to get updates and keep an eye on this repository in case I've made any mistakes.
+
+== Frequently Asked Questions ==
+
+**Is that enough to comply with the GDPR?**
+
+* I don't know, ask a law expert.
+
+== Changelog ==
+
+[Changelog](https://github.com/hupe13/extensions-leaflet-map-dsgvo/blob/main/CHANGELOG.md)

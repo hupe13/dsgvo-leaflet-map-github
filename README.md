@@ -1,13 +1,5 @@
 # DSGVO snippet for Leaflet Map and its Extensions Github Version
 
-Contributors: hupe13  
-Tags: dsgvo, gdpr, leaflet  
-Tested up to: 6.9  
-Stable tag: 3.1  
-Requires at least: 6.2  
-Requires PHP: 8.1  
-License: GPLv2 or later  
-
 Respect the DSGVO / GDPR when you use Leaflet Map and Extensions for Leaflet Map.
 
 ## Description
@@ -60,10 +52,4 @@ Please install [ghu-update-puc](https://github.com/hupe13/ghu-update-puc) to get
 
 ## Changelog
 
-### 3.2
-
-* WordPress 6.9.1 enqueue warning fixed
-
-### Previous
-
-[Changelog](https://github.com/hupe13/extensions-leaflet-map-dsgvo/blob/main/changes.md)
+[Changelog](https://github.com/hupe13/extensions-leaflet-map-dsgvo/blob/main/CHANGELOG.md)
