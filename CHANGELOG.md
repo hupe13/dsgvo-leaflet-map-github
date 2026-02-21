@@ -1,6 +1,7 @@
 ### 3.2
 
 * WordPress 6.9.1 enqueue warning fixed
+* admin's special condition removed
 
 ### 251114 / Plugins WordPress Version 3.1
 

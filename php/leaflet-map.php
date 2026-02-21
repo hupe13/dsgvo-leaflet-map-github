@@ -93,7 +93,7 @@ add_filter(
 );
 
 function leafext_query_cookie( $output, $tag ) {
-	if ( ( is_singular() || is_archive() || is_home() || is_front_page() ) && ! current_user_can( 'edit_post', get_the_ID() ) ) {
+	if ( is_singular() || is_archive() || is_home() || is_front_page() ) {
 		global $leafext_cookie_mapid;
 		if (
 			is_admin()
