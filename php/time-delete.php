@@ -61,7 +61,7 @@ function leafext_form_delete_cookie( $atts, $content ) {
 			}
 			$content .= '<input type="hidden" name="cookie" value="delete">';
 			$content .= '<input type="hidden" name="origin" value=' . get_permalink( get_the_ID() ) . '>';
-			$content .= wp_nonce_field( 'leafext_dsgvo', 'leafext_dsgvo_cookie' );
+			$content .= wp_nonce_field( 'leafext_dsgvo', 'leafext_dsgvo_cookie', true, false );
 			if ( isset( $atts['link'] ) ) {
 				$content .= '<input type="hidden" value="' . esc_attr( $submit ) . '" name="leafext_cookie_button" />';
 				$content .= '&nbsp;<a href="javascript:;" onclick="parentNode.submit();">' . $submit . '</a>&nbsp;';

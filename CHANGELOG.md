@@ -1,3 +1,7 @@
+### 210305 / Plugins WordPress Version 3.3
+
+* fixed wp_nonce_field
+
 ### 210221 / Plugins WordPress Version 3.2
 
 * WordPress 6.9.1 enqueue warning fixed

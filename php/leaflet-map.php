@@ -119,7 +119,7 @@ function leafext_query_cookie( $output, $tag ) {
 			LEAFEXT_DSGVO_PLUGIN_VERSION
 		);
 		$formbegin_safe = '<form action="#map_' . $leafext_cookie_mapid . '" method="post">';
-		$formbegin_safe = $formbegin_safe . wp_nonce_field( 'leafext_dsgvo', 'leafext_dsgvo_okay' );
+		$formbegin_safe = $formbegin_safe . wp_nonce_field( 'leafext_dsgvo', 'leafext_dsgvo_okay', true, false );
 		$settings       = leafext_dsgvo_settings();
 		$formtext       = '<p>' . $settings['text'] . '</p>';
 		$formend_safe   = '<p class="submit leafext-dsgvo-submit">
