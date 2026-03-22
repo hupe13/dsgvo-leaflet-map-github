@@ -2,10 +2,10 @@
 
 Contributors: hupe13
 Tags: dsgvo, gdpr, leaflet
-Tested up to: 6.9
-Stable tag: 260304
+Tested up to: 7.0
+Stable tag: 260322
 Requires at least: 6.2
-Requires PHP: 8.1
+Requires PHP: 8.2
 License: GPLv2 or later
 
 Respect the DSGVO / GDPR when you use Leaflet Map and Extensions for Leaflet Map.

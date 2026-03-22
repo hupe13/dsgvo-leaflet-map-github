@@ -69,7 +69,7 @@ function leafext_setcookie() {
 			'httponly' => true,
 			'samesite' => 'Strict', // None || Lax  || Strict
 		);
-		setcookie( 'leafext', time(), $arr_cookie_options );
+		setcookie( 'leafext', (string) time(), $arr_cookie_options );
 		$_COOKIE['leafext'] = time();
 	}
 }
@@ -131,7 +131,7 @@ function leafext_query_cookie( $output, $tag ) {
 
 		if ( ! isset( $leafext_okay ) ) {
 			$leafext_okay = true;
-			$form = true;
+			$form         = true;
 		} else {
 			$count = filter_var( $settings['count'], FILTER_VALIDATE_BOOLEAN );
 			if ( $count ) {

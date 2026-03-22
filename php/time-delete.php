@@ -21,9 +21,9 @@ function leafext_get_cookie_time( $atts, $content ) {
 
 			$gmt = isset( $atts['gmt'] ) ? $atts['gmt'] : 0;
 			if ( $gmt ) {
-				$content = gmdate( $format, $cookie_time );
+				$content = gmdate( $format, (int) $cookie_time );
 			} else {
-				$content = wp_date( $format, $cookie_time );
+				$content = wp_date( $format, (int) $cookie_time );
 			}
 
 			$before = isset( $atts['before'] ) ? '<div class="cookietext">' . $atts['before'] : '';
@@ -100,7 +100,7 @@ function leafext_delete_cookie() {
 						'httponly' => true,
 						'samesite' => 'Strict', // None || Lax  || Strict
 					);
-					setcookie( 'leafext', time(), $arr_cookie_options );
+					setcookie( 'leafext', (string) time(), $arr_cookie_options );
 					if ( isset( $_POST['origin'] ) ) {
 						header( 'Location: ' . esc_url_raw( wp_unslash( $_POST['origin'] ) ) );
 						exit;

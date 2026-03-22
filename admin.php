@@ -24,7 +24,7 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 	add_action( 'admin_menu', 'leafext_dsgvo_add_page', 90 );
 
 	function leafext_dsgvo_init() {
-		add_settings_section( 'leafext_dsgvo', '', '', 'leafext_settings_dsgvo' );
+		add_settings_section( 'leafext_dsgvo', '', '__return_empty_string', 'leafext_settings_dsgvo' );
 		$fields = leafext_dsgvo_params();
 		foreach ( $fields as $field ) {
 			add_settings_field(
@@ -36,12 +36,19 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 				$field['param'],
 			);
 		}
-		// https://stackoverflow.com/a/77545721
 		$leafext_dsgvo = get_option( 'leafext_dsgvo' );
 		if ( $leafext_dsgvo === false ) {
-			add_option( 'leafext_dsgvo', '' );
+			add_option( 'leafext_dsgvo', array() );
 		}
-		register_setting( 'leafext_settings_dsgvo', 'leafext_dsgvo', 'leafext_validate_dsgvo' );
+		register_setting(
+			'leafext_settings_dsgvo',
+			'leafext_dsgvo',
+			array(
+				'type'              => 'array',
+				'sanitize_callback' => 'leafext_validate_dsgvo',
+				'default'           => array(),
+			)
+		);
 	}
 	add_action( 'admin_init', 'leafext_dsgvo_init' );
 
@@ -232,11 +239,6 @@ if ( leafext_plugin_active( 'extensions-leaflet-map' ) ) {
 		foreach ( $tabs as $tab ) {
 			echo '<a href="' . esc_url( '?page=' . LEAFEXT_DSGVO_PLUGIN_NAME . '&tab=' . $tab['tab'] ) . '" class="nav-tab';
 			$active = ( $active_tab === $tab['tab'] ) ? ' nav-tab-active' : '';
-			if ( isset( $tab['strpos'] ) ) {
-				if ( strpos( $active_tab, $tab['strpos'] ) !== false ) {
-					$active = ' nav-tab-active';
-				}
-			}
 			echo esc_attr( $active );
 			echo '">' . esc_html( $tab['title'] ) . '</a>' . "\n";
 		}
