@@ -2,6 +2,7 @@
 
 * Tested up to WordPress 7.0
 * PHPStan checks - a few issues have been fixed
+* Fixed XSS Vulnerability
 
 ### 210305 / Plugins WordPress Version 3.3
 

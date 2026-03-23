@@ -26,13 +26,13 @@ function leafext_get_cookie_time( $atts, $content ) {
 				$content = wp_date( $format, (int) $cookie_time );
 			}
 
-			$before = isset( $atts['before'] ) ? '<div class="cookietext">' . $atts['before'] : '';
-			$after  = isset( $atts['after'] ) ? $atts['after'] . '</div>' : '';
+			$before = isset( $atts['before'] ) ? '<div class="cookietext">' . wp_kses_post( $atts['before'] ) : '';
+			$after = isset( $atts['after'] ) ? wp_kses_post( $atts['after'] ) . '</div>' : '';
 
 			$content = $before . $content . $after;
 
 		} else {
-			$content = isset( $atts['unset'] ) ? $atts['unset'] : '';
+			$content = isset( $atts['unset'] ) ? wp_kses_post( $atts['unset'] ) : '';
 		}
 	}
 	return $content;
@@ -64,19 +64,19 @@ function leafext_form_delete_cookie( $atts, $content ) {
 			$content .= wp_nonce_field( 'leafext_dsgvo', 'leafext_dsgvo_cookie', true, false );
 			if ( isset( $atts['link'] ) ) {
 				$content .= '<input type="hidden" value="' . esc_attr( $submit ) . '" name="leafext_cookie_button" />';
-				$content .= '&nbsp;<a href="javascript:;" onclick="parentNode.submit();">' . $submit . '</a>&nbsp;';
+				$content .= '&nbsp;<a href="javascript:;" onclick="parentNode.submit();">' . esc_html( $submit ) . '</a>&nbsp;';
 			} else {
 				$content .= '<div class="submit leafext-dsgvo-submit leafext-dsgvo-delete-submit">';
 				$content .= '<input type="submit" aria-label="Submit ' . esc_attr( $submit ) . '" value="' . esc_attr( $submit ) . '" name="leafext_cookie_button" />';
 				$content .= '</div>';
 			}
 			$content .= '</form>';
-			$before   = isset( $atts['before'] ) ? '<div class="cookietext">' . $atts['before'] : '';
-			$after    = isset( $atts['after'] ) ? $atts['after'] . '</div>' : '';
+			$before = isset( $atts['before'] ) ? '<div class="cookietext">' . wp_kses_post( $atts['before'] ) : '';
+			$after = isset( $atts['after'] ) ? wp_kses_post( $atts['after'] ) . '</div>' : '';
 
 			$content = $before . $content . $after;
 		} else {
-			$content = isset( $atts['unset'] ) ? $atts['unset'] : '';
+			$content = isset( $atts['unset'] ) ? wp_kses_post( $atts['unset'] ) : '';
 		}
 	}
 	return $content;
