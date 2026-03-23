@@ -1,6 +1,0 @@
-parameters:
-  level: 5
-  bootstrapFiles:
-   - dsgvo-leaflet-map.php
-  ignoreErrors:
-   - identifier: function.notFound
