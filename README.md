@@ -30,6 +30,12 @@ Das Plugin unterstützt <a href="https://wordpress.org/plugins/theme-translation
 
 Documentation in <a href="https://leafext.de/doku/dsgvo/">German</a>, <a href="https://leafext.de/en/doku/dsgvo/">English</a> and an <a href="https://leafext.de/extra/dsgvo-example/">example</a>.
 
+## Frequently Asked Questions
+
+**Is that enough to comply with the GDPR?**
+
+* I don't know, ask a law expert.
+
 ## Screenshots
 
 1. Settings <br>![Settings](.wordpress-org/screenshot-1.png)
@@ -43,12 +49,6 @@ Documentation in <a href="https://leafext.de/doku/dsgvo/">German</a>, <a href="h
 * Go to Settings - Leaflet Map - Leaflet Map GDPR and get documentation and settings options.
 
 Please install [ghu-update-puc](https://github.com/hupe13/ghu-update-puc) to get updates and keep an eye on this repository in case I've made any mistakes.
-
-## Frequently Asked Questions
-
-**Is that enough to comply with the GDPR?**
-
-* I don't know, ask a law expert.
 
 ## Changelog
 
