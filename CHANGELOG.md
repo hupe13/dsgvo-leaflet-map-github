@@ -1,4 +1,8 @@
-### 2103xx / Plugins WordPress Version 3.4
+### 2104xx / Plugins WordPress Version 3.5
+
+* some improvements to display dsgvo form
+
+### 210323 / Plugins WordPress Version 3.4
 
 * Tested up to WordPress 7.0
 * PHPStan checks - a few issues have been fixed

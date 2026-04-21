@@ -153,8 +153,9 @@ function leafext_query_cookie( $output, $tag ) {
 			}
 
 			if ( $sgpxoptions['sgpx'] === '1' ) {
-				$pos    = strpos( $output, '"></div><script>' );
-				$output = substr( $output, 0, $pos );
+				$output = preg_replace( array( '/\n/', '/\r/', '/\r\n/' ), '', $output );
+				$output = preg_replace( '/<script>.*<\/script>/', '', $output );
+				$output = str_replace( '"></div>', '', $output );
 				$output = str_replace( 'leaflet-map WPLeafletMap', 'leafext-dsgvo', $output );
 				$output = $output .
 				' background: linear-gradient(' . esc_attr( $settings['color'] ) . ',' . esc_attr( $settings['color'] ) . '), url(' . esc_url( $settings['mapurl'] ) . ');" ><div style="width: 70%;">'
@@ -182,8 +183,9 @@ function leafext_query_cookie( $output, $tag ) {
 		} else {
 			global $post;
 			if ( ! has_shortcode( $post->post_content, 'sgpx' ) ) {
-				$pos    = strpos( $output, '"></div><script>' );
-				$output = substr( $output, 0, $pos );
+				$output = preg_replace( array( '/\n/', '/\r/', '/\r\n/' ), '', $output );
+				$output = preg_replace( '/<script>.*<\/script>/', '', $output );
+				$output = str_replace( '"></div>', '', $output );
 				$output = str_replace( 'leaflet-map WPLeafletMap', 'leafext-dsgvo', $output );
 				$output = $output .
 				' background: linear-gradient(' . esc_attr( $settings['color'] ) . ',' . esc_attr( $settings['color'] ) . '), url(' . esc_url( $settings['mapurl'] ) . ');" ><div style="width: 70%; max-height: 100%;">'
