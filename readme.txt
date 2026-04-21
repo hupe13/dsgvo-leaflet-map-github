@@ -55,4 +55,4 @@ Please install [ghu-update-puc](https://github.com/hupe13/ghu-update-puc) to get
 
 == Changelog ==
 
-[Changelog](https://github.com/hupe13/extensions-leaflet-map-dsgvo/blob/main/CHANGELOG.md)
+[Changelog](https://github.com/hupe13/dsgvo-leaflet-map-github/blob/main/CHANGELOG.md)
