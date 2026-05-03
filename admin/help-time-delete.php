@@ -18,7 +18,7 @@ function leafext_dsgvo_time_delete_help() {
 	if ( is_singular() || is_archive() ) {
 		$codestyle = '';
 	} else {
-		leafext_enqueue_admin();
+		leafext_enqueue_dsgvo_admin();
 		$codestyle = ' class="language-coffeescript"';
 	}
 

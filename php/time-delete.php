@@ -27,7 +27,7 @@ function leafext_get_cookie_time( $atts, $content ) {
 			}
 
 			$before = isset( $atts['before'] ) ? '<div class="cookietext">' . wp_kses_post( $atts['before'] ) : '';
-			$after = isset( $atts['after'] ) ? wp_kses_post( $atts['after'] ) . '</div>' : '';
+			$after  = isset( $atts['after'] ) ? wp_kses_post( $atts['after'] ) . '</div>' : '';
 
 			$content = $before . $content . $after;
 
@@ -44,7 +44,7 @@ function leafext_form_delete_cookie( $atts, $content ) {
 		if ( isset( $_COOKIE['leafext'] ) ) {
 			wp_enqueue_style(
 				'leafext-dsgvo-css',
-				plugins_url( 'css/leafext-dsgvo.css', LEAFEXT_DSGVO_PLUGIN_FILE ),
+				plugins_url( '/../css/leafext-dsgvo.css', __FILE__ ),
 				array(),
 				LEAFEXT_DSGVO_PLUGIN_VERSION
 			);
@@ -71,8 +71,8 @@ function leafext_form_delete_cookie( $atts, $content ) {
 				$content .= '</div>';
 			}
 			$content .= '</form>';
-			$before = isset( $atts['before'] ) ? '<div class="cookietext">' . wp_kses_post( $atts['before'] ) : '';
-			$after = isset( $atts['after'] ) ? wp_kses_post( $atts['after'] ) . '</div>' : '';
+			$before   = isset( $atts['before'] ) ? '<div class="cookietext">' . wp_kses_post( $atts['before'] ) : '';
+			$after    = isset( $atts['after'] ) ? wp_kses_post( $atts['after'] ) . '</div>' : '';
 
 			$content = $before . $content . $after;
 		} else {

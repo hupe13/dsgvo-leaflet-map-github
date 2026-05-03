@@ -12,7 +12,7 @@ function leafext_dsgvo_css_help() {
 	if ( is_singular() || is_archive() ) {
 		$codestyle = '';
 	} else {
-		leafext_enqueue_admin();
+		leafext_enqueue_dsgvo_admin();
 		$codestyle = ' class="language-coffeescript"';
 	}
 	$text  = '<h3>';

@@ -13,8 +13,8 @@ defined( 'ABSPATH' ) || die();
  */
 function leafext_dsgvo_textdomain( $mofile, $domain ) {
 	if ( 'dsgvo-leaflet-map' === $domain ) {
-		if ( file_exists( LEAFEXT_DSGVO_PLUGIN_DIR . '/lang/dsgvo-leaflet-map-' . get_locale() . '.mo' ) ) {
-			$mofile = LEAFEXT_DSGVO_PLUGIN_DIR . '/lang/dsgvo-leaflet-map-' . get_locale() . '.mo';
+		if ( file_exists( __DIR__ . '/lang/dsgvo-leaflet-map-' . get_locale() . '.mo' ) ) {
+			$mofile = __DIR__ . '/lang/dsgvo-leaflet-map-' . get_locale() . '.mo';
 		}
 	}
 	return $mofile;

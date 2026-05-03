@@ -1,4 +1,8 @@
-### 2104xx / Plugins WordPress Version 3.5
+### 21050x / Plugins WordPress Version 3.6
+
+* Removed the dependency on Extensions for Leaflet Map
+
+### 210422 / Plugins WordPress Version 3.5
 
 * some improvements to display dsgvo form
 
