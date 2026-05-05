@@ -4,7 +4,7 @@
  * Description:       Respect the DSGVO / GDPR when you use Leaflet Map and Extensions for Leaflet Map.
  * Plugin URI:        https://leafext.de/en/
  * Update URI:        https://github.com/hupe13/dsgvo-leaflet-map-github
- * Version:           260503
+ * Version:           260505
  * Requires PHP:      8.2
  * Requires Plugins:  leaflet-map
  * Author:            hupe13

@@ -96,9 +96,7 @@ function leafext_query_cookie( $output, $tag ) {
 	if ( is_singular() || is_archive() || is_home() || is_front_page() ) {
 		global $leafext_cookie_mapid;
 		if (
-			is_admin()
-			// || is_user_logged_in()
-			|| ( 'leaflet-map' !== $tag && 'sgpx' !== $tag )
+			( 'leaflet-map' !== $tag && 'sgpx' !== $tag )
 			|| isset( $_COOKIE['leafext'] )
 			) {
 			if ( isset( $_SERVER['REQUEST_METHOD'] ) && sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) === 'POST' ) {

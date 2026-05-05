@@ -1,4 +1,4 @@
-### 21050x / Plugins WordPress Version 3.6
+### 210505 / Plugins WordPress Version 4.0
 
 * Removed the dependency on Extensions for Leaflet Map
 

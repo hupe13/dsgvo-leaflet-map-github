@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || die();
 
 function leafext_restricted( $atts, $content ) {
 	if ( is_singular() || is_archive() || is_home() || is_front_page() ) {
-		if ( is_user_logged_in() || isset( $_COOKIE['leafext'] ) ) {
+		if ( isset( $_COOKIE['leafext'] ) ) {
 			return $content;
 		} else {
 			if ( isset( $atts['text'] ) ) {

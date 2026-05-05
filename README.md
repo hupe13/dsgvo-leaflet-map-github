@@ -44,7 +44,7 @@ Documentation in <a href="https://leafext.de/doku/dsgvo/">German</a>, <a href="h
 ## Installation
 
 * Install and configure the plugin <a href="https://wordpress.org/plugins/leaflet-map/">Leaflet Map</a>.
-* Then install this plugin: Download the <a href="https://github.com/hupe13/extensions-leaflet-map-dsgvo/archive/refs/heads/main.zip">ZIP file</a> and install it on the plugin page of your WordPress installation.
+* Then install this plugin: Download the <a href="https://github.com/hupe13/dsgvo-leaflet-map-github/archive/refs/heads/main.zip">ZIP file</a> and install it on the plugin page of your WordPress installation.
 * Go to Settings - Leaflet Map - Leaflet Map GDPR and get documentation and settings options.
 
 Please install [ghu-update-puc](https://github.com/hupe13/ghu-update-puc) to get updates and keep an eye on this repository in case I've made any mistakes.
