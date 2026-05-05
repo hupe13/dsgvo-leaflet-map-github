@@ -1,22 +1,22 @@
-### 210505 / Plugins WordPress Version 4.0
+### 260505 / Plugins WordPress Version 4.0
 
 * Removed the dependency on Extensions for Leaflet Map
 
-### 210422 / Plugins WordPress Version 3.5
+### 260422 / Plugins WordPress Version 3.5
 
 * some improvements to display dsgvo form
 
-### 210323 / Plugins WordPress Version 3.4
+### 260323 / Plugins WordPress Version 3.4
 
 * Tested up to WordPress 7.0
 * PHPStan checks - a few issues have been fixed
 * Fixed XSS Vulnerability
 
-### 210305 / Plugins WordPress Version 3.3
+### 260305 / Plugins WordPress Version 3.3
 
 * fixed wp_nonce_field
 
-### 210221 / Plugins WordPress Version 3.2
+### 260221 / Plugins WordPress Version 3.2
 
 * WordPress 6.9.1 enqueue warning fixed
 * admin's special condition removed
