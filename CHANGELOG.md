@@ -1,3 +1,7 @@
+### 260816 / WP 7.1
+
+* Tested up WordPress 7.1
+
 ### 260505 / Plugins WordPress Version 4.0
 
 * Removed the dependency on Extensions for Leaflet Map
