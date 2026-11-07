@@ -8,19 +8,35 @@
 // Direktzugriff auf diese Datei verhindern.
 defined( 'ABSPATH' ) || die();
 
-// Add menu page
-function leafext_dsgvo_add_page() {
-	// Add Submenu
-	$leafext_admin_page = add_submenu_page(
-		'leaflet-map',
-		'Leaflet Map ' . __( 'Options GDPR', 'dsgvo-leaflet-map' ),
-		'Leaflet Map ' . __( 'GDPR', 'dsgvo-leaflet-map' ),
-		'manage_options',
-		LEAFEXT_DSGVO_PLUGIN_NAME,
-		'leafext_dsgvo_do_page'
-	);
+if ( is_plugin_active( 'leaflet-map/leaflet-map.php' ) ) {
+	// Add menu page
+	function leafext_dsgvo_add_page() {
+		// Add Submenu
+		$leafext_admin_page = add_submenu_page(
+			'leaflet-map',
+			'Leaflet Map ' . __( 'Options GDPR', 'dsgvo-leaflet-map' ),
+			'Leaflet Map ' . __( 'GDPR', 'dsgvo-leaflet-map' ),
+			'manage_options',
+			LEAFEXT_DSGVO_PLUGIN_NAME,
+			'leafext_dsgvo_do_page'
+		);
+	}
+	add_action( 'admin_menu', 'leafext_dsgvo_add_page', 90 );
+
+} elseif ( is_plugin_active( 'wp-gpx-maps/wp-gpx-maps.php' ) ) {
+	// Admin Menu
+	function leafext_sgpx_add_sub_page() {
+		add_submenu_page(
+			'options-general.php',
+			'WP GPX Maps ' . __( 'Options GDPR', 'dsgvo-leaflet-map' ),
+			'WP GPX Maps ' . __( 'GDPR', 'dsgvo-leaflet-map' ),
+			'manage_options',
+			LEAFEXT_DSGVO_PLUGIN_NAME,
+			'leafext_dsgvo_do_page',
+		);
+	}
+	add_action( 'admin_menu', 'leafext_sgpx_add_sub_page', 99 );
 }
-add_action( 'admin_menu', 'leafext_dsgvo_add_page', 90 );
 
 function leafext_dsgvo_init() {
 	add_settings_section( 'leafext_dsgvo', '', '__return_empty_string', 'leafext_settings_dsgvo' );
@@ -267,14 +283,15 @@ function leafext_enqueue_dsgvo_admin() {
 }
 
 function leafext_dsgvo_leaflet_map_needed() {
-	if ( ! leafext_plugin_active( 'leaflet-map' ) ) {
+	if ( ! leafext_plugin_active( 'leaflet-map' ) && ! leafext_plugin_active( 'wp-gpx-maps' ) ) {
 		$uri = sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ?? '' ) );
 		if ( strpos( $uri, 'plugins.php' ) !== false || strpos( $uri, 'admin.php' ) !== false ) {
 			$message = '<div class="error"><p>' . sprintf(
 			/* translators: %s is a link. */
-				__( 'Please install and activate %1$sLeaflet Map%2$s before using %3$s.', 'dsgvo-leaflet-map' ),
+				__( 'Please install and activate %1$sLeaflet Map%2$s or %3$sWP GPX Maps%4$s before using %5$s.', 'dsgvo-leaflet-map' ),
 				'<a href="https://wordpress.org/plugins/leaflet-map/">',
 				'</a>',
+				'<a href="https://wordpress.org/plugins/wp-gpx-maps/">WP GPX Maps</a>',
 				__( 'DSGVO snippet for Leaflet Map and its Extensions', 'dsgvo-leaflet-map' )
 			) . '</p></div>';
 			echo wp_kses_post( $message );

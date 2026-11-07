@@ -24,3 +24,7 @@
 .cookietext {
 	display: inline;
 }
+
+.bflm-leaflet-map-block {
+	color: unset;
+}

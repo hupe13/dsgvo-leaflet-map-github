@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - DSGVO snippet for Leaflet Map and its Extensions - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-04-25 19:57+0000\n"
+"PO-Revision-Date: 2026-11-07 16:28+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-20 08:48+0000\n"
 "Last-Translator: hupe13\n"
-"X-Loco-Version: 2.8.0; wp-6.8.1; php-8.2.28-nmm1"
+"X-Loco-Version: 2.8.9; wp-7.1.4; php-8.4.27-nmm1"
 
 #: admin/help-style.php:39 admin/help-style.php:53
 msgid "\"Text\""
@@ -54,7 +54,7 @@ msgstr "Alle Optionen sind wahlweise."
 msgid "An example is %1$shere%2$s"
 msgstr "%1$sHier%2$s ist ein Beispiel"
 
-#: admin/help-shortcode.php:73 admin/help.php:76
+#: admin/help.php:76 admin/help-shortcode.php:73
 msgid "and"
 msgstr "und"
 
@@ -74,7 +74,7 @@ msgstr "Inhalt der WordPress \"Löschen\"-Schaltfläche oder die Option"
 msgid "Cookie Lifetime"
 msgstr "Lebensdauer des Cookies"
 
-#: admin.php:236
+#: admin.php:252
 msgid "cookie-time & delete-cookie"
 msgstr "cookie-time & delete-cookie"
 
@@ -84,7 +84,7 @@ msgstr "cookie-time & delete-cookie"
 msgid "Date and time format, see %1$sCustomize date and time format%2$s."
 msgstr "Datums- und Zeitformat, siehe %1$sCustomize date and time format%2$s."
 
-#: admin.php:78
+#: admin.php:94
 msgid "days"
 msgstr "Tage"
 
@@ -97,7 +97,7 @@ msgstr "Lösche"
 msgid "Display instead a submit button a link with the content."
 msgstr "Zeige anstelle der Absendeschaltfläche einen Link mit dem Inhalt an."
 
-#: admin.php:278
+#: admin.php:295
 msgid "DSGVO snippet for Leaflet Map and its Extensions"
 msgstr "DSGVO Snippet für Leaflet Map und seine Erweiterungen"
 
@@ -105,7 +105,7 @@ msgstr "DSGVO Snippet für Leaflet Map und seine Erweiterungen"
 msgid "DSGVO snippet for Leaflet Map and its Extensions Github Version"
 msgstr "DSGVO Snippet für Leaflet Map und seine Erweiterungen Github Version"
 
-#: admin.php:84
+#: admin.php:100
 msgid "each map"
 msgstr "auf jeder Karte"
 
@@ -143,7 +143,7 @@ msgstr "trage deinen Text ein"
 msgid "Function"
 msgstr "Funktion"
 
-#: admin.php:17
+#: admin.php:18 admin.php:32
 msgid "GDPR"
 msgstr "DSGVO"
 
@@ -155,7 +155,7 @@ msgstr "DSGVO Snippet für Leaflet Map und seine Erweiterungen"
 msgid "Go to"
 msgstr "Gehe zu"
 
-#: admin.php:227
+#: admin.php:243
 msgid "Help"
 msgstr "Hilfe"
 
@@ -187,15 +187,15 @@ msgstr "Lokalzeit des Webservers (Standard) oder GMT-Zeit"
 msgid "Okay"
 msgstr "Verstanden!"
 
-#: admin.php:89
+#: admin.php:105
 msgid "only first"
 msgstr "nur auf der ersten Karte"
 
-#: admin/help-shortcode.php:53 admin/help-time-delete.php:37
+#: admin/help-time-delete.php:37 admin/help-shortcode.php:53
 msgid "Options"
 msgstr "Optionen"
 
-#: admin.php:16
+#: admin.php:17 admin.php:31
 msgid "Options GDPR"
 msgstr "Optionen DSGVO"
 
@@ -204,12 +204,14 @@ msgid "or option"
 msgstr "oder die Option"
 
 #. %s is a link.
-#: admin.php:275
+#: admin.php:291
 #, php-format
-msgid "Please install and activate %1$sLeaflet Map%2$s before using %3$s."
+msgid ""
+"Please install and activate %1$sLeaflet Map%2$s or %3$sWP GPX Maps%4$s "
+"before using %5$s."
 msgstr ""
-"Bitte installiere und aktiviere %1$sLeaflet Map%2$s, bevor du %3$s "
-"verwendest."
+"Bitte installiere und aktiviere entweder %1$sLeaflet Map%2$s oder %3$sWP GPX "
+"Maps%4$s bevor du %5$s verwendest."
 
 #: admin/help.php:26
 msgid "Reset"
@@ -232,7 +234,7 @@ msgstr "Siehe auch der Inhalt von"
 msgid "Setting of"
 msgstr "Die Einstellung von"
 
-#: dsgvo-leaflet-map.php:55 admin/help.php:14 admin/help.php:72
+#: dsgvo-leaflet-map.php:52 admin/help.php:14 admin/help.php:72
 msgid "Settings"
 msgstr "Einstellungen"
 
@@ -256,12 +258,12 @@ msgstr ""
 "Soll der Text auf jeder Karte der Seite angezeigt werden oder nur auf der "
 "ersten Karte?"
 
-#: admin.php:240 admin/help-style.php:19
+#: admin.php:256 admin/help-style.php:19
 msgid "Styling"
 msgstr "Styling"
 
-#: php/leaflet-map.php:20 admin/help-shortcode.php:73 admin/help-style.php:40
-#: admin/help-style.php:56
+#: admin/help-style.php:40 admin/help-style.php:56 admin/help-shortcode.php:73
+#: php/leaflet-map.php:20
 msgid "Submit Button"
 msgstr "Formular absenden"
 
@@ -269,7 +271,7 @@ msgstr "Formular absenden"
 msgid "Test it in a private browser window."
 msgstr "Teste es in einem privaten Browserfenster."
 
-#: php/leaflet-map.php:15 admin/help-shortcode.php:73
+#: admin/help-shortcode.php:73 php/leaflet-map.php:15
 msgid "Text"
 msgstr "Text"
 
