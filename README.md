@@ -1,4 +1,4 @@
-# DSGVO snippet for Leaflet Map and WP GPX Maps Github Version
+# DSGVO snippet for Leaflet Map and WP GPX Maps - Github Version
 
 Respect the DSGVO / GDPR when you use Leaflet Map or WP GPX Maps.
 

@@ -1,4 +1,4 @@
-=== DSGVO snippet for Leaflet Map and WP GPX Maps Github Version ===
+=== DSGVO snippet for Leaflet Map and WP GPX Maps - Github Version ===
 
 Contributors: hupe13
 Tags: dsgvo, gdpr, leaflet

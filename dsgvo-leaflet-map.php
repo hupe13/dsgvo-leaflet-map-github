@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       DSGVO snippet for Leaflet Map and WP GPX Maps Github Version
+ * Plugin Name:       DSGVO snippet for Leaflet Map and WP GPX Maps - Github Version
  * Description:       Respect the DSGVO / GDPR when you use Leaflet Map or WP GPX Maps.
  * Plugin URI:        https://leafext.de/en/
  * Update URI:        https://github.com/hupe13/dsgvo-leaflet-map-github

@@ -2,6 +2,7 @@
 
 * Support for WP GPX Maps
 * Support for CartoBlocks for Leaflet
+* new Description
 
 ### 260816 / WP 7.1
 
