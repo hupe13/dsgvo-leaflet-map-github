@@ -166,28 +166,22 @@ function leafext_dsgvo_do_page() {
 
 	echo '<div style="max-width: 1000px;">';
 
-	if ( ! leafext_plugin_active( 'leaflet-map' ) ) {
-		echo '<div class="wrap nothickbox">';
-		leafext_dsgvo_help();
-		echo '</div>' . "\n";
-	} else {
-		leafext_admin_dsgvo_tabs();
+	leafext_admin_dsgvo_tabs();
 
-		if ( strpos( $active_tab, 'shortcode' ) !== false ) {
-			include_once __DIR__ . '/admin/help-shortcode.php';
-			leafext_dsgvo_short_code_help();
-		} elseif ( strpos( $active_tab, 'time-delete' ) !== false ) {
-			include_once __DIR__ . '/admin/help-time-delete.php';
-			leafext_dsgvo_time_delete_help();
-		} elseif ( strpos( $active_tab, 'css' ) !== false ) {
-			include_once __DIR__ . '/admin/help-style.php';
-			echo wp_kses_post( leafext_dsgvo_css_help() );
-		} else {
-			if ( function_exists( 'leafext_dsgvo_updates_from_github' ) ) {
-				leafext_dsgvo_updates_from_github();
-			}
-			leafext_dsgvo_main_help();
+	if ( strpos( $active_tab, 'shortcode' ) !== false ) {
+		include_once __DIR__ . '/admin/help-shortcode.php';
+		leafext_dsgvo_short_code_help();
+	} elseif ( strpos( $active_tab, 'time-delete' ) !== false ) {
+		include_once __DIR__ . '/admin/help-time-delete.php';
+		leafext_dsgvo_time_delete_help();
+	} elseif ( strpos( $active_tab, 'css' ) !== false ) {
+		include_once __DIR__ . '/admin/help-style.php';
+		echo wp_kses_post( leafext_dsgvo_css_help() );
+	} else {
+		if ( function_exists( 'leafext_dsgvo_updates_from_github' ) ) {
+			leafext_dsgvo_updates_from_github();
 		}
+		leafext_dsgvo_main_help();
 	}
 	echo '</div>';
 }
@@ -291,7 +285,8 @@ function leafext_dsgvo_leaflet_map_needed() {
 				__( 'Please install and activate %1$sLeaflet Map%2$s or %3$sWP GPX Maps%4$s before using %5$s.', 'dsgvo-leaflet-map' ),
 				'<a href="https://wordpress.org/plugins/leaflet-map/">',
 				'</a>',
-				'<a href="https://wordpress.org/plugins/wp-gpx-maps/">WP GPX Maps</a>',
+				'<a href="https://wordpress.org/plugins/wp-gpx-maps/">',
+				'</a>',
 				__( 'DSGVO snippet for Leaflet Map and its Extensions', 'dsgvo-leaflet-map' )
 			) . '</p></div>';
 			echo wp_kses_post( $message );

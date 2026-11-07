@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DSGVO snippet for Leaflet Map and its Extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-07 16:26+0000\n"
+"POT-Creation-Date: 2026-11-07 17:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -41,12 +41,12 @@ msgid "All options are optional."
 msgstr ""
 
 #. %s are hrefs.
-#: admin/help.php:49
+#: admin/help.php:50
 #, php-format
 msgid "An example is %1$shere%2$s"
 msgstr ""
 
-#: admin/help.php:76 admin/help-shortcode.php:73
+#: admin/help.php:77 admin/help-shortcode.php:73
 msgid "and"
 msgstr ""
 
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Cookie Lifetime"
 msgstr ""
 
-#: admin.php:252
+#: admin.php:246
 msgid "cookie-time & delete-cookie"
 msgstr ""
 
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Display instead a submit button a link with the content."
 msgstr ""
 
-#: admin.php:295
+#: admin.php:290
 msgid "DSGVO snippet for Leaflet Map and its Extensions"
 msgstr ""
 
@@ -100,7 +100,7 @@ msgstr ""
 msgid "each map"
 msgstr ""
 
-#: admin/help.php:74
+#: admin/help.php:75
 msgid "enable"
 msgstr ""
 
@@ -124,7 +124,7 @@ msgstr ""
 msgid "extra text to display before date and time or %s."
 msgstr ""
 
-#: admin/help.php:78
+#: admin/help.php:79
 msgid "fill in your text"
 msgstr ""
 
@@ -140,11 +140,11 @@ msgstr ""
 msgid "GDPR (DSGVO) snippet for Leaflet Map and its Extensions"
 msgstr ""
 
-#: admin/help.php:70
+#: admin/help.php:71
 msgid "Go to"
 msgstr ""
 
-#: admin.php:243
+#: admin.php:237
 msgid "Help"
 msgstr ""
 
@@ -158,12 +158,12 @@ msgid "hupe13"
 msgstr ""
 
 #. %s is a link.
-#: admin/help.php:84
+#: admin/help.php:85
 #, php-format
 msgid "If you wish to translate these strings in %s use"
 msgstr ""
 
-#: admin/help.php:68
+#: admin/help.php:69
 msgid "is active."
 msgstr ""
 
@@ -192,7 +192,7 @@ msgid "or option"
 msgstr ""
 
 #. %s is a link.
-#: admin.php:291
+#: admin.php:285
 #, php-format
 msgid ""
 "Please install and activate %1$sLeaflet Map%2$s or %3$sWP GPX Maps%4$s "
@@ -218,7 +218,7 @@ msgstr ""
 msgid "Setting of"
 msgstr ""
 
-#: dsgvo-leaflet-map.php:52 admin/help.php:14 admin/help.php:72
+#: dsgvo-leaflet-map.php:52 admin/help.php:14 admin/help.php:73
 msgid "Settings"
 msgstr ""
 
@@ -240,7 +240,7 @@ msgid ""
 "map?"
 msgstr ""
 
-#: admin.php:256 admin/help-style.php:19
+#: admin.php:250 admin/help-style.php:19
 msgid "Styling"
 msgstr ""
 
@@ -282,8 +282,8 @@ msgstr ""
 #: admin/help.php:42
 #, php-format
 msgid ""
-"The plugin prevents the shortcode %1$s from being executed. If the user "
-"agrees, the cookie %2$s is set and %1$s is executed."
+"The plugin prevents the shortcodes %1$s or %3$s from being executed. If the "
+"user agrees, the cookie %2$s is set and the shortcodes are executed."
 msgstr ""
 
 #: php/leaflet-map.php:25

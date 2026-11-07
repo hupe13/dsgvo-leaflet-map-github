@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - DSGVO snippet for Leaflet Map and its Extensions - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-11-07 16:28+0000\n"
+"PO-Revision-Date: 2026-11-07 17:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,12 +49,12 @@ msgid "All options are optional."
 msgstr "Alle Optionen sind wahlweise."
 
 #. %s are hrefs.
-#: admin/help.php:49
+#: admin/help.php:50
 #, php-format
 msgid "An example is %1$shere%2$s"
 msgstr "%1$sHier%2$s ist ein Beispiel"
 
-#: admin/help.php:76 admin/help-shortcode.php:73
+#: admin/help.php:77 admin/help-shortcode.php:73
 msgid "and"
 msgstr "und"
 
@@ -74,7 +74,7 @@ msgstr "Inhalt der WordPress \"Löschen\"-Schaltfläche oder die Option"
 msgid "Cookie Lifetime"
 msgstr "Lebensdauer des Cookies"
 
-#: admin.php:252
+#: admin.php:246
 msgid "cookie-time & delete-cookie"
 msgstr "cookie-time & delete-cookie"
 
@@ -97,7 +97,7 @@ msgstr "Lösche"
 msgid "Display instead a submit button a link with the content."
 msgstr "Zeige anstelle der Absendeschaltfläche einen Link mit dem Inhalt an."
 
-#: admin.php:295
+#: admin.php:290
 msgid "DSGVO snippet for Leaflet Map and its Extensions"
 msgstr "DSGVO Snippet für Leaflet Map und seine Erweiterungen"
 
@@ -109,7 +109,7 @@ msgstr "DSGVO Snippet für Leaflet Map und seine Erweiterungen Github Version"
 msgid "each map"
 msgstr "auf jeder Karte"
 
-#: admin/help.php:74
+#: admin/help.php:75
 msgid "enable"
 msgstr "aktiviere"
 
@@ -135,7 +135,7 @@ msgstr "zusätzlicher Text, der nach Datum und Zeit bzw. %s angezeigt wird."
 msgid "extra text to display before date and time or %s."
 msgstr "zusätzlicher Text, der vor Datum und Zeit bzw. %s angezeigt wird."
 
-#: admin/help.php:78
+#: admin/help.php:79
 msgid "fill in your text"
 msgstr "trage deinen Text ein"
 
@@ -151,11 +151,11 @@ msgstr "DSGVO"
 msgid "GDPR (DSGVO) snippet for Leaflet Map and its Extensions"
 msgstr "DSGVO Snippet für Leaflet Map und seine Erweiterungen"
 
-#: admin/help.php:70
+#: admin/help.php:71
 msgid "Go to"
 msgstr "Gehe zu"
 
-#: admin.php:243
+#: admin.php:237
 msgid "Help"
 msgstr "Hilfe"
 
@@ -169,12 +169,12 @@ msgid "hupe13"
 msgstr "hupe13"
 
 #. %s is a link.
-#: admin/help.php:84
+#: admin/help.php:85
 #, php-format
 msgid "If you wish to translate these strings in %s use"
 msgstr "Wenn du diese Texte in %s übersetzen möchtest, verwende"
 
-#: admin/help.php:68
+#: admin/help.php:69
 msgid "is active."
 msgstr "ist aktiviert."
 
@@ -204,7 +204,7 @@ msgid "or option"
 msgstr "oder die Option"
 
 #. %s is a link.
-#: admin.php:291
+#: admin.php:285
 #, php-format
 msgid ""
 "Please install and activate %1$sLeaflet Map%2$s or %3$sWP GPX Maps%4$s "
@@ -234,7 +234,7 @@ msgstr "Siehe auch der Inhalt von"
 msgid "Setting of"
 msgstr "Die Einstellung von"
 
-#: dsgvo-leaflet-map.php:52 admin/help.php:14 admin/help.php:72
+#: dsgvo-leaflet-map.php:52 admin/help.php:14 admin/help.php:73
 msgid "Settings"
 msgstr "Einstellungen"
 
@@ -258,7 +258,7 @@ msgstr ""
 "Soll der Text auf jeder Karte der Seite angezeigt werden oder nur auf der "
 "ersten Karte?"
 
-#: admin.php:256 admin/help-style.php:19
+#: admin.php:250 admin/help-style.php:19
 msgid "Styling"
 msgstr "Styling"
 
@@ -308,12 +308,16 @@ msgstr ""
 #. %1$s is leaflet-map, %2$s is the cookie name
 #: admin/help.php:42
 #, php-format
+#| msgid ""
+#| "The plugin prevents the shortcode %1$s from being executed. If the user "
+#| "agrees, the cookie %2$s is set and %1$s is executed."
 msgid ""
-"The plugin prevents the shortcode %1$s from being executed. If the user "
-"agrees, the cookie %2$s is set and %1$s is executed."
+"The plugin prevents the shortcodes %1$s or %3$s from being executed. If the "
+"user agrees, the cookie %2$s is set and the shortcodes are executed."
 msgstr ""
-"Das Plugin verhindert das Ausführen des Shortcodes %1$s. Erst wenn der "
-"Nutzer zustimmt, wird das Cookie %2$s gesetzt und %1$s ausgeführt."
+"Das Plugin verhindert das Ausführen der Shortcodes %1$s bzw. %3$s. Erst wenn "
+"der Nutzer zustimmt, wird das Cookie %2$s gesetzt und die Shortcodes werden "
+"ausgeführt."
 
 #: php/leaflet-map.php:25
 msgid "URL to background image. Leave it blank for no image."
