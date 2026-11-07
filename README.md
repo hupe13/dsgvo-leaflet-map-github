@@ -44,6 +44,8 @@ Du kannst den Text anpassen und es auf eigene Verantwortung verwenden.
 
 Das Plugin funktioniert auch mit [CartoBlocks for Leaflet](https://wordpress.org/plugins/cartoblocks-for-leaflet/) und unterstützt <a href="https://wordpress.org/plugins/theme-translation-for-polylang/">Theme and plugin translation for Polylang (TTfP)</a>.
 
+Das Plugin funktioniert bei WP GPX Maps nur, wenn der Shortcode "sgpx" verwendet wird. Wenn die Karten mit dem Block-Editor erstellt werden, funktioniert es (noch) nicht.
+
 ## Documentation
 
 Documentation in <a href="https://leafext.de/doku/dsgvo/">German</a>, <a href="https://leafext.de/en/doku/dsgvo/">English</a> and an <a href="https://leafext.de/extra/dsgvo-example/">example</a>.
