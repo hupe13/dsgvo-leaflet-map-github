@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DSGVO snippet for Leaflet Map and its Extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-07 17:28+0000\n"
+"POT-Creation-Date: 2026-11-07 18:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -89,11 +89,11 @@ msgid "Display instead a submit button a link with the content."
 msgstr ""
 
 #: admin.php:290
-msgid "DSGVO snippet for Leaflet Map and its Extensions"
+msgid "DSGVO snippet for Leaflet Map and WP GPX Maps"
 msgstr ""
 
 #. Name of the plugin
-msgid "DSGVO snippet for Leaflet Map and its Extensions Github Version"
+msgid "DSGVO snippet for Leaflet Map and WP GPX Maps Github Version"
 msgstr ""
 
 #: admin.php:100
@@ -137,7 +137,7 @@ msgid "GDPR"
 msgstr ""
 
 #: admin/help.php:33
-msgid "GDPR (DSGVO) snippet for Leaflet Map and its Extensions"
+msgid "GDPR (DSGVO) snippet for Leaflet Map and WP GPX Maps"
 msgstr ""
 
 #: admin/help.php:71
@@ -204,9 +204,7 @@ msgid "Reset"
 msgstr ""
 
 #. Description of the plugin
-msgid ""
-"Respect the DSGVO / GDPR when you use Leaflet Map and Extensions for Leaflet "
-"Map."
+msgid "Respect the DSGVO / GDPR when you use Leaflet Map or WP GPX Maps."
 msgstr ""
 
 #: admin/help-style.php:31

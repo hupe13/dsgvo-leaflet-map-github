@@ -287,7 +287,7 @@ function leafext_dsgvo_leaflet_map_needed() {
 				'</a>',
 				'<a href="https://wordpress.org/plugins/wp-gpx-maps/">',
 				'</a>',
-				__( 'DSGVO snippet for Leaflet Map and its Extensions', 'dsgvo-leaflet-map' )
+				__( 'DSGVO snippet for Leaflet Map and WP GPX Maps', 'dsgvo-leaflet-map' )
 			) . '</p></div>';
 			echo wp_kses_post( $message );
 		}

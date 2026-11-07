@@ -30,7 +30,7 @@ function leafext_dsgvo_main_help() {
 
 function leafext_dsgvo_help() {
 	$text = '<h2>' .
-	__( 'GDPR (DSGVO) snippet for Leaflet Map and its Extensions', 'dsgvo-leaflet-map' )
+	__( 'GDPR (DSGVO) snippet for Leaflet Map and WP GPX Maps', 'dsgvo-leaflet-map' )
 	. '</h2>';
 	echo wp_kses_post( $text );
 }

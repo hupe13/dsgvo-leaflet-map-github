@@ -1,6 +1,6 @@
 ### 261107 / Plugins WordPress Version 4.1
 
-* Support for WP GPX-Maps
+* Support for WP GPX Maps
 * Support for CartoBlocks for Leaflet
 
 ### 260816 / WP 7.1
