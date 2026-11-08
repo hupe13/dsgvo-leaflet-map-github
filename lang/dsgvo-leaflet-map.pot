@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DSGVO snippet for Leaflet Map and its Extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-07 18:47+0000\n"
+"POT-Creation-Date: 2026-11-08 15:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -93,7 +93,7 @@ msgid "DSGVO snippet for Leaflet Map and WP GPX Maps"
 msgstr ""
 
 #. Name of the plugin
-msgid "DSGVO snippet for Leaflet Map and WP GPX Maps Github Version"
+msgid "DSGVO snippet for Leaflet Map and WP GPX Maps - Github Version"
 msgstr ""
 
 #: admin.php:100

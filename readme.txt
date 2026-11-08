@@ -3,7 +3,7 @@
 Contributors: hupe13
 Tags: dsgvo, gdpr, leaflet
 Tested up to: 7.1
-Stable tag: 261107
+Stable tag: 261108
 Requires at least: 6.2
 Requires PHP: 8.2
 License: GPLv2 or later
@@ -31,8 +31,6 @@ You can customize the text and use it on your own responsibility.
 
 The plugin does work with [CartoBlocks for Leaflet](https://wordpress.org/plugins/cartoblocks-for-leaflet/) and supports <a href="https://wordpress.org/plugins/theme-translation-for-polylang/">Theme and plugin translation for Polylang (TTfP)</a>.
 
-The plugin only works for WP GPX Maps if you use the shortcode sgpx. If you create the maps using the block editor, it won't work (yet).
-
 = DSGVO =
 
 Es gibt ein offizielles [WordPress Plugin](https://de.wordpress.org/plugins/dsgvo-leaflet-map/) und es ist nicht nötig, dass du dieses hier verwendest. Es sei denn, du hast einen Vorschlag für eine Verbesserung bzw. eine neue Funktion und ich bitte dich, diese zu testen.
@@ -51,8 +49,6 @@ Dieses kleine Snippet holt die Zustimmung des Nutzers zum Laden der Karten ein.
 Du kannst den Text anpassen und es auf eigene Verantwortung verwenden.
 
 Das Plugin funktioniert auch mit [CartoBlocks for Leaflet](https://wordpress.org/plugins/cartoblocks-for-leaflet/) und unterstützt <a href="https://wordpress.org/plugins/theme-translation-for-polylang/">Theme and plugin translation for Polylang (TTfP)</a>.
-
-Das Plugin funktioniert bei WP GPX Maps nur, wenn der Shortcode "sgpx" verwendet wird. Wenn die Karten mit dem Block-Editor erstellt werden, funktioniert es (noch) nicht.
 
 = Documentation =
 

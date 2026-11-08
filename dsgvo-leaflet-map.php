@@ -4,7 +4,7 @@
  * Description:       Respect the DSGVO / GDPR when you use Leaflet Map or WP GPX Maps.
  * Plugin URI:        https://leafext.de/en/
  * Update URI:        https://github.com/hupe13/dsgvo-leaflet-map-github
- * Version:           261107
+ * Version:           261108
  * Requires PHP:      8.2
  * Author:            hupe13
  * Author URI:        https://leafext.de/en/
@@ -55,6 +55,7 @@ function leafext_add_action_dsgvo_links( $actions ) {
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'leafext_add_action_dsgvo_links' );
 
 require_once __DIR__ . '/php/leaflet-map.php';
+require_once __DIR__ . '/php/sgpx.php';
 require_once __DIR__ . '/php/shortcode.php';
 require_once __DIR__ . '/php/time-delete.php';
 

@@ -141,40 +141,10 @@ function leafext_query_cookie( $output, $tag ) {
 
 		if ( $tag === 'sgpx' ) {
 			$sgpxoptions = get_option( 'leafext_sgpxparams', array( 'sgpx' => '0' ) );
-			if ( leafext_plugin_active( 'extensions-leaflet-map' ) && $sgpxoptions['sgpx'] === '1' ) {
-				if ( ! isset( $leafext_sgpx ) ) {
-					$leafext_sgpx = true;
-					$form         = true;
-				}
-				$output = preg_replace( array( '/\n/', '/\r/', '/\r\n/' ), '', $output );
-				$output = preg_replace( '/<script>.*<\/script>/', '', $output );
-				$output = str_replace( '"></div>', '', $output );
-				$output = str_replace( 'leaflet-map WPLeafletMap', 'leafext-dsgvo', $output );
-				$output = $output .
-				' background: linear-gradient(' . esc_attr( $settings['color'] ) . ',' . esc_attr( $settings['color'] ) . '), url(' . esc_url( $settings['mapurl'] ) . ');" ><div style="width: 70%;">'
-				. ( $form ? $formbegin_safe . wp_kses_post( $formtext ) . $formend_safe : '' ) . '</div></div>';
-			} else {
-				// search width and height
-				$search = 'style="width:';
-				$pos    = strpos( $output, $search );
-				if ( $pos === false ) {
-					$search = 'style="height:';
-					$pos    = strpos( $output, $search );
-				}
-				$style  = substr( $output, $pos - strlen( $output ) );
-				$search = 'position:relative';
-				$pos    = strpos( $style, $search );
-				if ( $pos === false ) {
-					$search = '"></div>';
-					$pos    = strpos( $style, $search );
-				}
-				$style  = substr( $style, 0, $pos );
-				$output = '<div class="leafext-dsgvo" ' . $style .
-				' background: linear-gradient(' . esc_attr( $settings['color'] ) . ',' . esc_attr( $settings['color'] ) . '), url(' . esc_url( $settings['mapurl'] ) . ');" ><div style="width: 70%; max-height: 100%;">'
-				. ( $form ? $formbegin_safe . wp_kses_post( $formtext ) . $formend_safe : '' ) . '</div></div>';
+			if ( leafext_plugin_active( 'wp-gpx-maps' ) && $sgpxoptions['sgpx'] === '0' ) {
+				$output = leafext_sgpx_form( $output );
 			}
 		} else {
-			global $post;
 			$output = preg_replace( array( '/\n/', '/\r/', '/\r\n/' ), '', $output );
 			$output = preg_replace( '/<script>.*<\/script>/', '', $output );
 			$output = str_replace( '"></div>', '', $output );
