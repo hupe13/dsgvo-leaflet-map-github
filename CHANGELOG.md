@@ -1,3 +1,7 @@
+### 261111 / Plugins WordPress Version 4.1.1
+
+* Fixed bug if shortcode in backend
+
 ### 261107 / Plugins WordPress Version 4.1
 
 * Support for WP GPX Maps

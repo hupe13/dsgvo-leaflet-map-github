@@ -153,8 +153,8 @@ function leafext_query_cookie( $output, $tag ) {
 			' background: linear-gradient(' . esc_attr( $settings['color'] ) . ',' . esc_attr( $settings['color'] ) . '), url(' . esc_url( $settings['mapurl'] ) . ');" ><div style="width: 70%; max-height: 100%;">'
 			. ( $form ? $formbegin_safe . wp_kses_post( $formtext ) . $formend_safe : '' ) . '</div></div>';
 		}
-		return $output;
 	}
+	return $output;
 }
 add_filter( 'do_shortcode_tag', 'leafext_query_cookie', 10, 2 );
 
