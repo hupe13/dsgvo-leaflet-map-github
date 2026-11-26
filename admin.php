@@ -104,6 +104,10 @@ function leafext_dsgvo_form( $field ) {
 			echo '> ';
 			esc_html_e( 'only first', 'dsgvo-leaflet-map' );
 			echo ' ';
+			if ( leafext_plugin_active( 'wp-gpx-maps' ) ) {
+				echo '. --- ';
+				esc_html_e( 'This does not work, if you create maps with the GPX Map block.', 'dsgvo-leaflet-map' );
+			}
 			break;
 		case 'okay':
 			echo '<input type="text" ' . esc_attr( $ttfp ) . ' size="80" name="leafext_dsgvo[okay]" value="' . esc_attr( $setting ) . '" />';

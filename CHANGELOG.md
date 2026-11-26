@@ -1,3 +1,7 @@
+### 261127 / Plugins WordPress Version 4.2
+
+* Tested on WordPress 7.2
+
 ### 261111 / Plugins WordPress Version 4.1.1
 
 * Fixed bug if shortcode in backend

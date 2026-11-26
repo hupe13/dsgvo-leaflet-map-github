@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DSGVO snippet for Leaflet Map and its Extensions\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-08 15:14+0000\n"
+"POT-Creation-Date: 2026-11-26 20:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Cookie Lifetime"
 msgstr ""
 
-#: admin.php:246
+#: admin.php:250
 msgid "cookie-time & delete-cookie"
 msgstr ""
 
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Display instead a submit button a link with the content."
 msgstr ""
 
-#: admin.php:290
+#: admin.php:294
 msgid "DSGVO snippet for Leaflet Map and WP GPX Maps"
 msgstr ""
 
@@ -144,7 +144,7 @@ msgstr ""
 msgid "Go to"
 msgstr ""
 
-#: admin.php:237
+#: admin.php:241
 msgid "Help"
 msgstr ""
 
@@ -192,7 +192,7 @@ msgid "or option"
 msgstr ""
 
 #. %s is a link.
-#: admin.php:285
+#: admin.php:289
 #, php-format
 msgid ""
 "Please install and activate %1$sLeaflet Map%2$s or %3$sWP GPX Maps%4$s "
@@ -238,7 +238,7 @@ msgid ""
 "map?"
 msgstr ""
 
-#: admin.php:250 admin/help-style.php:19
+#: admin.php:254 admin/help-style.php:19
 msgid "Styling"
 msgstr ""
 
@@ -282,6 +282,10 @@ msgstr ""
 msgid ""
 "The plugin prevents the shortcodes %1$s or %3$s from being executed. If the "
 "user agrees, the cookie %2$s is set and the shortcodes are executed."
+msgstr ""
+
+#: admin.php:109
+msgid "This does not work, if you create maps with the GPX Map block."
 msgstr ""
 
 #: php/leaflet-map.php:25
